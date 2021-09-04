@@ -5,6 +5,14 @@
       create: true
       relink: true
 
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- create:
+    - ~/.config/fish
+
 - link:
+    ~/.config/fish/config.fish: config/fish/config.fish
     ~/.gitconfig: gitconfig
     ~/.gitignore.global: gitignore.global
+    ~/.tmux.conf: tmux.conf
