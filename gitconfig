@@ -1,0 +1,60 @@
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = true
+[color "branch"]
+  current = "#00B2CA bold"
+  local = "#395E66"
+  plain = "#ff00ff" # what is?
+  remote = "#FC6DAB"
+  upstream = "#ff00ff" # what is?
+[color "diff"]
+  commit = "#ff00ff" # what is?
+  context = "#ff00ff" # what is?
+  frag = "#3EC300 #FFFC31 bold"
+  func = "#5603AD nobold"
+  meta = "#0FA3B1"
+  new = "#04A777"
+  old = "#E01A4F"
+  plain = "#80727B"
+  whitespace = "#D62839 reverse"
+[color "diff-highlight"]
+  newHighlight = "#214E34 bold ul"
+  newNormal = "#04A777"
+  oldHighlight = "#7F255F bold ul"
+  oldNormal = "#E01A4F"
+[color "status"]
+  added = "#00A7E1"
+  branch = "#5F0A87 bold"
+  changed = "#EB5160"
+  header = "#1C1018"
+  nobranch = "#ff00ff" # what is?
+  unmerged = "#ff00ff bold" # what is?
+  untracked = "#F3A712"
+[commit]
+  verbose = true
+[core]
+  editor = /opt/homebrew/bin/vim
+  excludesfile = ~/.gitignore.global
+  pager = diff-so-fancy | less --tabs=4 -RFX
+[credential]
+  helper = cache --timeout=3600
+[format]
+  pretty = %C("#F6828C")%h %C(reset)%C("#F59CA9")→ %C("#371E30")%s%C(reset) %C("#A03E99")%aN %C("#DF57BC")%cd%C("#A51C30")%d
+[github]
+  user = jarednorman
+[init]
+  defaultBranch = main
+[log]
+  date = relative
+  decorate = short
+[merge]
+  conflictstyle = diff3
+[push]
+  default = current
+[rebase]
+  autosquash = true
+[user]
+  name = Jared Norman
+  email = jared@super.gd
