@@ -10,9 +10,12 @@
 
 - create:
     - ~/.config/fish
+    - ~/.hammerspoon/
 
 - link:
     ~/.config/fish/config.fish: config/fish/config.fish
     ~/.gitconfig: gitconfig
     ~/.gitignore.global: gitignore.global
     ~/.tmux.conf: tmux.conf
+    ~/.hammerspoon/init.lua: hammerspoon/init.lua
+    ~/.hammerspoon/Spoons: hammerspoon/Spoons

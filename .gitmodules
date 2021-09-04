@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "hammerspoon/Spoons/ControlEscape.spoon"]
+	path = hammerspoon/Spoons/ControlEscape.spoon
+	url = git@github.com:jasonrudolph/ControlEscape.spoon.git
