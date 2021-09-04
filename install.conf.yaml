@@ -22,3 +22,4 @@
     ~/.hammerspoon/init.lua: hammerspoon/init.lua
     ~/.inputrc: inputrc
     ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
