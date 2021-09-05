@@ -9,7 +9,13 @@ end
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- Just tpope things.
+  use 'tpope/vim-commentary'
+  use 'tpope/vim-eunuch'
   use 'tpope/vim-fugitive'
+  use 'tpope/vim-repeat'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-unimpaired'
 
   use 'christoomey/vim-tmux-navigator'
 
