@@ -22,6 +22,7 @@
     ~/.gitignore.global: gitignore.global
     ~/.hammerspoon/Spoons: hammerspoon/Spoons
     ~/.hammerspoon/init.lua: hammerspoon/init.lua
+    ~/.ignore: ignore
     ~/.inputrc: inputrc
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
