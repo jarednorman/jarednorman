@@ -1,5 +1,9 @@
--- he final frontier.
+-- The final frontier.
 vim.g.mapleader = ' '
+
+-- I like pretty things.
+vim.o.termguicolors = true
+vim.o.background = 'light'
 
 -- Use two spaces for indentation.
 vim.o.shiftwidth = 2

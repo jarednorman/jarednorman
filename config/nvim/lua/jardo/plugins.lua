@@ -6,8 +6,19 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd 'packadd packer.nvim'
 end
 
-require('packer').startup(function()
+require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use 'christoomey/vim-tmux-navigator'
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() vim.cmd [[TSUpdate]] end,
+    config = function() require('jardo.plugins.treesitter') end
+  }
+
+  use {
+    'sainnhe/edge',
+    config = function() vim.cmd [[colorscheme edge]] end
+  }
 end)
