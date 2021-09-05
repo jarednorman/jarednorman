@@ -9,6 +9,8 @@ end
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  use 'tpope/vim-fugitive'
+
   use 'christoomey/vim-tmux-navigator'
 
   use {
@@ -25,7 +27,9 @@ require('packer').startup(function(use)
     requires = {
       {'nvim-lua/plenary.nvim'}
     },
-    config = function() require("telescope").load_extension("mapper") end
+    config = function()
+      require("telescope").load_extension("mapper")
+    end
   }
 
   use {
@@ -35,7 +39,12 @@ require('packer').startup(function(use)
   }
 
   use {
-    'sainnhe/edge',
-    config = function() vim.cmd [[colorscheme edge]] end
+    'Th3Whit3Wolf/one-nvim',
+    config = function() vim.cmd [[colorscheme one-nvim]] end
+  }
+
+  use {
+    'hoob3rt/lualine.nvim',
+    config = function() require('jardo.plugins.lualine') end,
   }
 end)
