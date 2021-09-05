@@ -7,8 +7,9 @@ vim.cmd 'nnoremap <c-w>o \\<noop>'
 vim.cmd 'vnoremap <c-w>o \\<noop>'
 
 -- Telescope Stuff
-Mapper.map('n', '<leader><leader>', "<cmd>lua require('telescope.builtin').find_files()<cr>", {silent = true, noremap = true}, "Telescope", "find_files", "Show all files")
+Mapper.map('n', '<leader><leader>', "<cmd>lua require('telescope.builtin').find_files()<cr>", {silent = true, noremap = true}, "Telescope", "find_files", "Search for files")
 Mapper.map('n', '<leader>g', "<cmd>lua require('telescope.builtin').live_grep()<cr>", {silent = true, noremap = true}, "Telescope", "live_grep", "Grep codebase")
+Mapper.map('n', '<leader>b', "<cmd>lua require('telescope.builtin').buffers()<cr>", {silent = true, noremap = true}, "Telescope", "find_buffers", "Search for buffers")
 
 -- Clear search.
 Mapper.map('n', '<leader>/', '<cmd>let @/=""<cr>', {silent = true, noremap = true}, "Misc", "clear_search", "Clear search")
