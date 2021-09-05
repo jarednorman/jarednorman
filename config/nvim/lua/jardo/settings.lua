@@ -1,6 +1,9 @@
 -- The final frontier.
 vim.g.mapleader = ' '
 
+-- Shake your body like a salmon floatin' up stream!
+vim.o.shell = 'fish'
+
 -- I like pretty things.
 vim.o.termguicolors = true
 vim.o.background = 'light'
@@ -14,6 +17,7 @@ vim.o.smartindent = true
 vim.o.smarttab = true
 
 vim.o.backup = false
+vim.o.swapfile = false
 vim.o.undofile = true
 
 -- Focus the "new" split.
