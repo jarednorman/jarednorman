@@ -7,6 +7,10 @@ set -gx EDITOR nvim
 
 set --erase fish_greeting
 
+function f
+  ag --nocolor -l -g $argv
+end
+
 function fish_mode_prompt
   # This disables the default indicator.
 end
