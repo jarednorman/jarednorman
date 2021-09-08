@@ -20,6 +20,15 @@ require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
 
   use {
+    "mileszs/ack.vim",
+    config = function()
+      vim.cmd "set grepprg=rg\\ --vimgrep\\ --no-heading"
+      vim.cmd "set grepformat=%f:%l:%c:%m,%f:%l:%m"
+      vim.cmd "let g:ackprg='rg --vimgrep --no-heading'"
+    end
+  }
+
+  use {
     "lazytanuki/nvim-mapper",
     config = function()
       require("nvim-mapper").setup{}
