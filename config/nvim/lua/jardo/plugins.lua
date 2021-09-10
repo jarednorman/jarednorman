@@ -54,11 +54,9 @@ require('packer').startup(function(use)
   }
 
   use {
-    'projekt0n/github-nvim-theme',
+    'RRethy/nvim-base16',
     config = function()
-      require("github-theme").setup({
-        themeStyle = "light",
-      })
+      vim.cmd [[colo base16-tomorrow]]
     end
   }
 end)
