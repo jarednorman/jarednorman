@@ -15,4 +15,4 @@ Mapper.map('n', '<leader>b', "<cmd>lua require('telescope.builtin').buffers()<cr
 Mapper.map('n', '<leader>/', '<cmd>let @/=""<cr>', {silent = true, noremap = true}, "Misc", "clear_search", "Clear search")
 
 -- Run tests.
-Mapper.map('n', '<leader>r', '<cmd>:terminal bundle exec rspec %<cr>', {silent = true, noremap = true}, "External commands", "rspec", "Run RSpec on current file")
+Mapper.map('n', '<leader>r', '<cmd>:!bundle exec rspec %<cr>', {silent = true, noremap = true}, "External commands", "rspec", "Run RSpec on current file")

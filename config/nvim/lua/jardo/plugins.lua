@@ -54,12 +54,11 @@ require('packer').startup(function(use)
   }
 
   use {
-    'Th3Whit3Wolf/one-nvim',
-    config = function() vim.cmd [[colorscheme one-nvim]] end
-  }
-
-  use {
-    'hoob3rt/lualine.nvim',
-    config = function() require('jardo.plugins.lualine') end,
+    'projekt0n/github-nvim-theme',
+    config = function()
+      require("github-theme").setup({
+        themeStyle = "light",
+      })
+    end
   }
 end)
