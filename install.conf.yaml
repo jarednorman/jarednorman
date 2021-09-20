@@ -14,6 +14,7 @@
     - ~/.hammerspoon/
 
 - link:
+    ~/.bin: bin
     ~/.bundle/config: bundler_config
     ~/.config/fish/conf.d/brew.fish: config/fish/conf.d/brew.fish
     ~/.config/fish/config.fish: config/fish/config.fish
