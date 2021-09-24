@@ -19,6 +19,8 @@ require('packer').startup(function(use)
 
   use 'christoomey/vim-tmux-navigator'
 
+  use 'dag/vim-fish'
+
   use {
     "mileszs/ack.vim",
     config = function()
@@ -56,7 +58,8 @@ require('packer').startup(function(use)
   use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd [[colo base16-tomorrow]]
+      vim.cmd [[colo base16-default-dark]]
+      vim.cmd [[highlight VertSplit guibg=none guifg=#282828]]
     end
   }
 end)
