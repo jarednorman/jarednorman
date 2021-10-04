@@ -62,4 +62,14 @@ require('packer').startup(function(use)
       vim.cmd [[highlight VertSplit guibg=none guifg=#282828]]
     end
   }
+
+  use {
+    "beauwilliams/focus.nvim",
+    config = function()
+      require("focus").setup({
+        width = 80,
+        cursorline = false
+      })
+    end
+    }
 end)
