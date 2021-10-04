@@ -16,10 +16,11 @@
 - link:
     ~/.bin: bin
     ~/.bundle/config: bundler_config
-    ~/.config/fish/conf.d/brew.fish: config/fish/conf.d/brew.fish
     ~/.config/fish/conf.d/base16.fish: config/fish/conf.d/base16.fish
+    ~/.config/fish/conf.d/brew.fish: config/fish/conf.d/brew.fish
     ~/.config/fish/config.fish: config/fish/config.fish
     ~/.config/fish/fish_plugins: config/fish/fish_plugins
+    ~/.config/kitty: config/kitty
     ~/.config/nvim: config/nvim
     ~/.gitconfig: gitconfig
     ~/.gitignore.global: gitignore.global
