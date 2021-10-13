@@ -30,7 +30,7 @@
   changed = 3
   header = 8
   nobranch = "#ff00ff" # what is?
-  unmerged = "#ff00ff bold" # what is?
+  unmerged = 14 bold
   untracked = 9
 [commit]
   verbose = true
