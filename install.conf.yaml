@@ -11,6 +11,7 @@
 - create:
     - ~/.bundle
     - ~/.config/fish
+    - ~/.config/fish/conf.d
     - ~/.hammerspoon/
 
 - link:
@@ -18,6 +19,7 @@
     ~/.bundle/config: bundler_config
     ~/.config/fish/conf.d/base16.fish: config/fish/conf.d/base16.fish
     ~/.config/fish/conf.d/brew.fish: config/fish/conf.d/brew.fish
+    ~/.config/fish/conf.d/fnm.fish: config/fish/conf.d/fnm.fish
     ~/.config/fish/config.fish: config/fish/config.fish
     ~/.config/fish/fish_plugins: config/fish/fish_plugins
     ~/.config/kitty: config/kitty
