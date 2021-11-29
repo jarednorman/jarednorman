@@ -1,3 +1,3 @@
 # fnm
-set PATH /home/jardo/.fnm $PATH
+set PATH /Users/jardonamron/.fnm $PATH
 fnm env | source
