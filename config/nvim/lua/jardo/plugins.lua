@@ -42,10 +42,17 @@ require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
-      {'nvim-lua/plenary.nvim'}
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
     },
     config = function()
+      require('telescope').setup {
+        extensions = {
+          fzf = {fuzzy = false}
+        }
+      }
       require("telescope").load_extension("mapper")
+      require("telescope").load_extension("fzf")
     end
   }
 
