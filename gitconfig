@@ -58,3 +58,5 @@
 [user]
   name = Jared Norman
   email = jared@super.gd
+[pull]
+	ff = only
