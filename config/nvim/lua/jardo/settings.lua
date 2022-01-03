@@ -20,6 +20,8 @@ vim.o.backup = false
 vim.o.swapfile = false
 vim.o.undofile = true
 
+vim.o.autoread = true
+
 -- Focus the "new" split.
 vim.o.splitbelow = true
 vim.o.splitright = true
