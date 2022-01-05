@@ -22,6 +22,8 @@ vim.o.undofile = true
 
 vim.o.autoread = true
 
+vim.o.number = true
+
 -- Focus the "new" split.
 vim.o.splitbelow = true
 vim.o.splitright = true
