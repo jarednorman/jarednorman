@@ -60,3 +60,5 @@
   email = jared@super.gd
 [pull]
 	ff = only
+[advice]
+	skippedCherryPicks = false
