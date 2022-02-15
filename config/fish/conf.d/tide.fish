@@ -2,14 +2,14 @@ set -U tide_left_prompt_items pwd git jobs newline character
 set -U tide_right_prompt_items cmd_duration status context
 
 # Git
-set -U tide_git_color_branch blue
+set -U tide_git_color_branch magenta
 set -U tide_git_color_conflicted brred
-set -U tide_git_color_dirty red
+set -U tide_git_color_dirty yellow
 set -U tide_git_color_operation cyan
-set -U tide_git_color_staged yellow
-set -U tide_git_color_stash yellow
+set -U tide_git_color_staged green
+set -U tide_git_color_stash brblack
 set -U tide_git_color_untracked cyan
-set -U tide_git_color_upstream magenta
+set -U tide_git_color_upstream blue
 
 # Jobs
 set -U tide_jobs_icon "😴"

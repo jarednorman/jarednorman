@@ -29,9 +29,9 @@
   branch = 4 bold
   changed = 3
   header = 8
-  nobranch = 14 bold
-  unmerged = 14 bold
-  untracked = 9
+  nobranch = 9 bold
+  unmerged = 9 bold
+  untracked = 4
 [commit]
   verbose = true
 [core]
