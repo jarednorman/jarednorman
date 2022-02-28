@@ -10,7 +10,7 @@
   remote = 8
   upstream = "#ff00ff" # what is?
 [color "diff"]
-  commit = "#ff00ff" # what is?
+  commit = 3
   context = "#ff00ff" # what is?
   frag = 3 bold
   func = 3 nobold
