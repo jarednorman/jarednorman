@@ -22,6 +22,23 @@ require('packer').startup(function(use)
   use 'dag/vim-fish'
 
   use {
+    "dcampos/nvim-snippy",
+    config = function()
+      require("snippy").setup({
+        mappings = {
+          is = {
+            ["<Tab>"] = "expand_or_advance",
+            ["<S-Tab>"] = "previous",
+          },
+          nx = {
+            ["<leader>x"] = "cut_text",
+          },
+        },
+      })
+    end,
+  }
+
+  use {
     "mileszs/ack.vim",
     config = function()
       vim.cmd "set grepprg=rg\\ --vimgrep\\ --no-heading"
