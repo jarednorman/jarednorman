@@ -21,6 +21,8 @@ require('packer').startup(function(use)
 
   use 'dag/vim-fish'
 
+  use 'rescript-lang/vim-rescript'
+
   use {
     "dcampos/nvim-snippy",
     config = function()
