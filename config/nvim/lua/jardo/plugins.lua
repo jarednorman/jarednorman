@@ -94,7 +94,7 @@ require('packer').startup(function(use)
   use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd [[colo base16-gruvbox-light-soft]]
+      vim.cmd [[colo base16-gruvbox-dark-hard]]
       -- Set vertical dividers to colour10
       vim.cmd [[highlight VertSplit guibg=none guifg=#ebdbb2]]
       -- Set line numbers to colour8
