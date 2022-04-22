@@ -1,4 +1,4 @@
-set -U tide_left_prompt_items pwd git newline jobs character
+set -U tide_left_prompt_items pwd git jobs newline character
 set -U tide_right_prompt_items cmd_duration status context
 
 # Git
@@ -12,7 +12,8 @@ set -U tide_git_color_untracked cyan
 set -U tide_git_color_upstream blue
 
 # Jobs
-set -U tide_jobs_icon "\u001b[32m⋯"
+set -U tide_jobs_color blue
+set -U tide_jobs_icon "*"
 
 # Status
 set -U tide_status_icon_failure "✗"
