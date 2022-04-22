@@ -10,19 +10,13 @@
 
 - create:
     - ~/.bundle
-    - ~/.config/fish
-    - ~/.config/fish/conf.d
-    - ~/.hammerspoon/
+    - ~/.config
+    - ~/.hammerspoon
+    - ~/.zsh
 
 - link:
     ~/.bin: bin
     ~/.bundle/config: bundler_config
-    ~/.config/fish/conf.d/base16.fish: config/fish/conf.d/base16.fish
-    ~/.config/fish/conf.d/brew.fish: config/fish/conf.d/brew.fish
-    ~/.config/fish/conf.d/fnm.fish: config/fish/conf.d/fnm.fish
-    ~/.config/fish/conf.d/tide.fish: config/fish/conf.d/tide.fish
-    ~/.config/fish/config.fish: config/fish/config.fish
-    ~/.config/fish/fish_plugins: config/fish/fish_plugins
     ~/.config/kitty: config/kitty
     ~/.config/nvim: config/nvim
     ~/.gitconfig: gitconfig
@@ -33,3 +27,6 @@
     ~/.inputrc: inputrc
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
+    ~/.zsh/vendor: zsh/vendor
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc

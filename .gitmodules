@@ -5,3 +5,6 @@
 [submodule "hammerspoon/Spoons/ControlEscape.spoon"]
 	path = hammerspoon/Spoons/ControlEscape.spoon
 	url = git@github.com:jasonrudolph/ControlEscape.spoon.git
+[submodule "zsh/vendor/zsh-history-substring-search"]
+	path = zsh/vendor/zsh-history-substring-search
+	url = git@github.com:zsh-users/zsh-history-substring-search.git
