@@ -32,15 +32,16 @@ export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=2,bg=11"
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=9,bg=11"
 
 # Set custom prompt.
+autoload -U colors && colors
 autoload -Uz add-zsh-hook vcs_info
 add-zsh-hook precmd vcs_info
 
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '*'
-zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}•'
+zstyle ':vcs_info:*' stagedstr '%{%F{green}%}•'
 
-zstyle ':vcs_info:git:*' formats '%b%u%c'
-zstyle ':vcs_info:git:*' actionformats '%b%u%c [%a]'
+zstyle ':vcs_info:git:*' formats '%{%F{11}%}%b%c%u'
+zstyle ':vcs_info:git:*' actionformats '%{%F{11}%}%b%c%u %{%F{yellow}%}%a'
 
 setopt prompt_subst
 PROMPT='%2~ %# '

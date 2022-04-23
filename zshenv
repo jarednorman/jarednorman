@@ -10,5 +10,3 @@ path=(
   $HOME/.bin
   $path
 )
-
-# DON'T COMMIT THIS. IT'S FOR TESTING.
