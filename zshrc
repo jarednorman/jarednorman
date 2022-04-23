@@ -44,5 +44,5 @@ zstyle ':vcs_info:git:*' formats '%{%F{11}%}%b%c%u'
 zstyle ':vcs_info:git:*' actionformats '%{%F{11}%}%b%c%u %{%F{yellow}%}%a'
 
 setopt prompt_subst
-PROMPT='%{%F{6}%}%3~ %(1j.%{%F{5}%}%j .)%(!.%{%F{9}%}$.%{%F{3}%}→) '
-RPROMPT='${vcs_info_msg_0_}%(?.. %F{9}%?)'
+PROMPT='%{%F{6}%}%3~ %(1j.%{%F{5}%}%j .)%(?.%F{3}.%F{9})%(!.%{%F{9}%}$.→) '
+RPROMPT='${vcs_info_msg_0_}'
