@@ -30,3 +30,18 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=2,bg=11"
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=9,bg=11"
+
+# Set custom prompt.
+autoload -Uz add-zsh-hook vcs_info
+add-zsh-hook precmd vcs_info
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '*'
+zstyle ':vcs_info:*' stagedstr '+'
+
+zstyle ':vcs_info:git:*' formats '%b%u%c'
+zstyle ':vcs_info:git:*' actionformats '%b%u%c [%a]'
+
+setopt prompt_subst
+PROMPT='%2~ %# '
+RPROMPT='${vcs_info_msg_0_}'
