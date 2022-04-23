@@ -36,13 +36,15 @@ autoload -U colors && colors
 autoload -Uz add-zsh-hook vcs_info
 add-zsh-hook precmd vcs_info
 
+setopt prompt_subst
+ZLE_RPROMPT_INDENT=0
+
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}•'
 zstyle ':vcs_info:*' stagedstr '%{%F{green}%}•'
 
-zstyle ':vcs_info:git:*' formats '%{%F{11}%}%b%c%u'
-zstyle ':vcs_info:git:*' actionformats '%{%F{11}%}%b%c%u %{%F{yellow}%}%a'
+zstyle ':vcs_info:git:*' formats '%{%F{11}%}%b(%c%u%{%F{11}%})'
+zstyle ':vcs_info:git:*' actionformats '%{%F{11}%}%b[%{%F{11}%}%c%u%{%F{11}%}](%{%F{yellow}%}%a%F{11}%})'
 
-setopt prompt_subst
 PROMPT='%{%F{6}%}%3~ %(1j.%{%F{5}%}%j .)%(?.%F{3}.%F{9})%(!.%{%F{9}%}$.→) '
 RPROMPT='${vcs_info_msg_0_}'
