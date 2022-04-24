@@ -46,6 +46,13 @@ SAVEHIST=$HISTSIZE
 setopt CORRECT
 setopt CORRECT_ALL
 
+# Change cursor to line in insert mode.
+_fix_cursor() {
+   echo -ne '\e[5 q'
+}
+
+precmd_functions+=(_fix_cursor)
+
 # Enable fnm and automatically use the correct node.js version when changing
 # directories.
 eval "$(fnm env --use-on-cd)"
