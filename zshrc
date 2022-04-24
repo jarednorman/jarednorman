@@ -42,10 +42,6 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 
-# Forgive my mistakes.
-setopt CORRECT
-setopt CORRECT_ALL
-
 # Change cursor to line in insert mode.
 _fix_cursor() {
    echo -ne '\e[5 q'
