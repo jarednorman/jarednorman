@@ -46,5 +46,5 @@ zstyle ':vcs_info:*' stagedstr '%{%F{green}%}•'
 zstyle ':vcs_info:git:*' formats '%{%F{11}%}%b(%c%u%{%F{11}%})'
 zstyle ':vcs_info:git:*' actionformats '%{%F{11}%}%b[%{%F{11}%}%c%u%{%F{11}%}](%{%F{yellow}%}%a%F{11}%})'
 
-PROMPT='%{%F{6}%}%3~ %(1j.%{%F{5}%}%j .)%(?.%F{3}.%F{9})%(!.%{%F{9}%}$.→) '
+PROMPT='%{%F{2}%}%3~ %(1j.%{%F{5}%}%j .)%(?.%F{3}.%F{9})%(!.%{%F{9}%}$.→) '
 RPROMPT='${vcs_info_msg_0_}'
