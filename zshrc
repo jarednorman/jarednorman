@@ -2,8 +2,49 @@
 #
 # .zshrc is only sourced for interactive shells.
 
+# Misc.
+setopt AUTOCD
+
+# IYKYK
+bindkey -v
+
+# Auto-escape URLs.
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic
+
+# Delete past the position entering insert mode.
+bindkey '^?' backward-delete-char
+bindkey '^H' backward-delete-char
+
 # Enable completion engine.
 autoload -Uz compinit && compinit
+zstyle ':completion:*:matches' group 'yes'
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:options' auto-description '%d'
+zstyle ':completion:*:corrections' format ' %F{green}-- %d (errors: %e) --%f'
+zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose yes
+
+# Doomed to relive it.
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=$HISTSIZE
+
+# Forgive my mistakes.
+setopt CORRECT
+setopt CORRECT_ALL
 
 # Enable fnm and automatically use the correct node.js version when changing
 # directories.
