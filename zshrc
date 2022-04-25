@@ -92,3 +92,6 @@ zstyle ':vcs_info:git:*' actionformats '%{%F{11}%}%b[%{%F{11}%}%c%u%{%F{11}%}](%
 
 PROMPT='%{%F{2}%}%3~ %(1j.%{%F{5}%}%j .)%(?.%F{3}.%F{9})%(!.%{%F{9}%}$.→) '
 RPROMPT='${vcs_info_msg_0_}'
+
+# Search for files quickly by path
+function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
