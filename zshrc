@@ -5,8 +5,9 @@
 # Misc.
 setopt AUTOCD
 
-# IYKYK
+# We vim.
 bindkey -v
+export EDITOR=nvim
 
 # Auto-escape URLs.
 autoload -U url-quote-magic
@@ -41,13 +42,6 @@ setopt HIST_IGNORE_SPACE
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
-
-# Change cursor to line in insert mode.
-_fix_cursor() {
-   echo -ne '\e[5 q'
-}
-
-precmd_functions+=(_fix_cursor)
 
 # Enable fnm and automatically use the correct node.js version when changing
 # directories.
