@@ -89,3 +89,8 @@ RPROMPT='${vcs_info_msg_0_}'
 
 # Search for files quickly by path
 function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
+
+function tgem() {
+  GEM_NAME="$(bundle list --name-only | fzf)"
+  tmux new-window -c "$(bundle info --path $GEM_NAME)" -n "$GEM_NAME"
+}
