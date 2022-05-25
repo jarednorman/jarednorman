@@ -1,8 +1,8 @@
 hs.loadSpoon('ControlEscape'):start()
 
--- hs.hotkey.bind({"alt"}, "c", function()
---   hs.application.frontmostApplication():focusedWindow():centerOnScreen()
--- end)
+hs.hotkey.bind({"alt"}, "c", function()
+  hs.application.frontmostApplication():focusedWindow():centerOnScreen()
+end)
 
 -- Okay, I'll admit that I never actually got in the habit of using any of
 -- these. Sad, as I'd really like to.
