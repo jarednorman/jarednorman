@@ -43,6 +43,19 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 
+# Automatically expand aliases.
+function expand-alias() {
+	zle _expand_alias
+	zle self-insert
+}
+zle -N expand-alias
+bindkey -M main ' ' expand-alias
+
+# Aliases
+alias be="bundle exec"
+alias ber="bundle exec rspec"
+alias g="git"
+
 # Enable fnm and automatically use the correct node.js version when changing
 # directories.
 eval "$(fnm env --use-on-cd)"
