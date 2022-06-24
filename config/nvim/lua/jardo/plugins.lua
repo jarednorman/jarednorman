@@ -94,11 +94,22 @@ require('packer').startup(function(use)
   use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd [[colo base16-gruvbox-light-soft]]
+      vim.cmd [[colo base16-gruvbox-light-medium]]
       -- Set vertical dividers to colour10
       vim.cmd [[highlight VertSplit guibg=none guifg=#ebdbb2]]
       -- Set line numbers to colour8
       vim.cmd [[highlight LineNr guibg=none guifg=#bdae93]]
+      -- Fix Telescope colours
+      vim.cmd [[highlight TelescopeBorder guibg=#ebdbb2 guifg=#ebdbb2]]
+      vim.cmd [[highlight TelescopePromptBorder guibg=#ebdbb2 guifg=#ebdbb2]]
+      vim.cmd [[highlight TelescopeNormal guibg=#ebdbb2 guifg=#504945]]
+      vim.cmd [[highlight TelescopePromptNormal guibg=#ebdbb2 guifg=#504945]]
+      vim.cmd [[highlight TelescopeResultsTitle guibg=#bdae93 guifg=#504945]]
+      vim.cmd [[highlight TelescopePromptTitle guibg=#bdae93 guifg=#504945]]
+      vim.cmd [[highlight TelescopePreviewTitle guibg=#bdae93 guifg=#504945]]
+      vim.cmd [[highlight TelescopeSelection guibg=#bdae93 guifg=#504945 gui=bold]]
+      vim.cmd [[highlight TelescopePromptPrefix guibg=#ebdbb2 guifg=#504945 gui=bold]]
+      vim.cmd [[highlight TelescopeMatching guibg=none guifg=#af3a03 gui=bold]]
     end
   }
 end)
