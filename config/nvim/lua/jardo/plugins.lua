@@ -102,11 +102,9 @@ require('packer').startup(function(use)
       vim.cmd [[let g:airline#extensions#tabline#show_tab_count = 0]]
       vim.cmd [[let g:airline#extensions#tabline#show_tab_nr = 0]]
       vim.cmd [[let g:airline#extensions#tabline#show_splits = 1]]
-      vim.cmd [[let g:airline#extensions#tabline#buffers_label = 'B']]
-      vim.cmd [[let g:airline#extensions#tabline#tabs_label = 'T']]
       vim.cmd [[let g:airline#extensions#tabline#show_buffers = 1]]
       vim.cmd [[let g:airline#extensions#tabline#show_close_button = 0]]
-      vim.cmd [[let g:airline_powerline_fonts = 0]]
+      vim.cmd [[let g:airline_powerline_fonts = 1]]
     end
   }
 
