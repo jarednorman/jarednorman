@@ -62,3 +62,5 @@
 	ff = only
 [advice]
 	skippedCherryPicks = false
+[alias]
+	sw = "!f(){ git switch $(git branch -l --sort=-committerdate --format=\"%(refname:short)\" --no-merged main | head -n 64 | fzf --preview \"git show --color=always {}\"); };f"
