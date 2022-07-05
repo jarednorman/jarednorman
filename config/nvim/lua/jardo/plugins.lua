@@ -92,24 +92,48 @@ require('packer').startup(function(use)
   }
 
   use {
+    'vim-airline/vim-airline',
+    requires = {
+      {'vim-airline/vim-airline-themes'}
+    },
+    config = function()
+      vim.cmd [[let g:airline#extensions#tabline#enabled = 1]]
+      vim.cmd [[let g:airline#extensions#tabline#formatter = 'unique_tail_improved']]
+      vim.cmd [[let g:airline#extensions#tabline#show_tab_count = 0]]
+      vim.cmd [[let g:airline#extensions#tabline#show_tab_nr = 0]]
+      vim.cmd [[let g:airline#extensions#tabline#show_splits = 1]]
+      vim.cmd [[let g:airline#extensions#tabline#buffers_label = 'B']]
+      vim.cmd [[let g:airline#extensions#tabline#tabs_label = 'T']]
+      vim.cmd [[let g:airline#extensions#tabline#show_buffers = 1]]
+      vim.cmd [[let g:airline#extensions#tabline#show_close_button = 0]]
+      vim.cmd [[let g:airline_powerline_fonts = 0]]
+    end
+  }
+
+  use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd [[colo base16-gruvbox-light-medium]]
+      local colour7 = '#d5c4a1'
+      local colour8 = '#665c54'
+      local colour9 = '#fe8019'
+      local colour10 = '#3c3836'
+
+      vim.cmd([[colo base16-gruvbox-dark-medium]])
       -- Set vertical dividers to colour10
-      vim.cmd [[highlight VertSplit guibg=none guifg=#ebdbb2]]
+      vim.cmd(string.format([[highlight VertSplit guibg=none guifg=%s]], colour10))
       -- Set line numbers to colour8
-      vim.cmd [[highlight LineNr guibg=none guifg=#bdae93]]
+      vim.cmd(string.format([[highlight LineNr guibg=none guifg=%s]], colour8))
       -- Fix Telescope colours
-      vim.cmd [[highlight TelescopeBorder guibg=#ebdbb2 guifg=#ebdbb2]]
-      vim.cmd [[highlight TelescopePromptBorder guibg=#ebdbb2 guifg=#ebdbb2]]
-      vim.cmd [[highlight TelescopeNormal guibg=#ebdbb2 guifg=#504945]]
-      vim.cmd [[highlight TelescopePromptNormal guibg=#ebdbb2 guifg=#504945]]
-      vim.cmd [[highlight TelescopeResultsTitle guibg=#bdae93 guifg=#504945]]
-      vim.cmd [[highlight TelescopePromptTitle guibg=#bdae93 guifg=#504945]]
-      vim.cmd [[highlight TelescopePreviewTitle guibg=#bdae93 guifg=#504945]]
-      vim.cmd [[highlight TelescopeSelection guibg=#bdae93 guifg=#504945 gui=bold]]
-      vim.cmd [[highlight TelescopePromptPrefix guibg=#ebdbb2 guifg=#504945 gui=bold]]
-      vim.cmd [[highlight TelescopeMatching guibg=none guifg=#af3a03 gui=bold]]
+      vim.cmd(string.format([[highlight TelescopeBorder guibg=%s guifg=%s]], colour10, colour10))
+      vim.cmd(string.format([[highlight TelescopePromptBorder guibg=%s guifg=%s]], colour10, colour10))
+      vim.cmd(string.format([[highlight TelescopeNormal guibg=%s guifg=%s]], colour10, colour7))
+      vim.cmd(string.format([[highlight TelescopePromptNormal guibg=%s guifg=%s]], colour10, colour7))
+      vim.cmd(string.format([[highlight TelescopeResultsTitle guibg=%s guifg=%s]], colour8, colour7))
+      vim.cmd(string.format([[highlight TelescopePromptTitle guibg=%s guifg=%s]], colour8, colour7))
+      vim.cmd(string.format([[highlight TelescopePreviewTitle guibg=%s guifg=%s]], colour8, colour7))
+      vim.cmd(string.format([[highlight TelescopeSelection guibg=%s guifg=%s gui=bold]], colour8, colour7))
+      vim.cmd(string.format([[highlight TelescopePromptPrefix guibg=%s guifg=%s gui=bold]], colour10, colour7))
+      vim.cmd(string.format([[highlight TelescopeMatching guibg=none guifg=%s gui=bold]], colour9))
     end
   }
 end)
