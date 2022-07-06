@@ -50,6 +50,12 @@ STATUSES = [
   "Raze the grey throne of deep-rooted self annihilation",
   "Assume the God form, seize the hidden shape",
   "We all are bent by unseen burdens",
+  "The dead kiss of luxury keeps you a slave",
+  "Nothing is ever enough, nor will ever be",
+  "Beg to be absolved of adversity",
+  "Ce que tout le monde dit doit être vrai",
+  "What you do not know cannot hurt you!",
+  "Reach high for the gold that is just out of reach"
 ]
 
 Time.now.tap do |now|
