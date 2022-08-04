@@ -22,7 +22,7 @@ vim.o.undofile = true
 
 vim.o.autoread = true
 
-vim.o.number = true
+vim.o.number = false
 
 -- Focus the "new" split.
 vim.o.splitbelow = true

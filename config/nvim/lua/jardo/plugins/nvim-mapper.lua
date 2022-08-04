@@ -68,3 +68,16 @@ Mapper.map('n',
   "rspec",
   "Run RSpec on current file"
 )
+
+Mapper.map(
+  'n',
+  '<leader>n',
+  "<cmd>tabd windo set invnumber<cr>",
+  {
+    silent = true,
+    noremap = true
+  },
+  "Misc",
+  "toggle_numbers",
+  "Toggle line numbers"
+)

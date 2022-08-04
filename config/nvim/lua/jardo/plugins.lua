@@ -92,34 +92,17 @@ require('packer').startup(function(use)
   }
 
   use {
-    'vim-airline/vim-airline',
-    requires = {
-      {'vim-airline/vim-airline-themes'}
-    },
-    config = function()
-      vim.cmd [[let g:airline#extensions#tabline#enabled = 1]]
-      vim.cmd [[let g:airline#extensions#tabline#formatter = 'unique_tail_improved']]
-      vim.cmd [[let g:airline#extensions#tabline#show_tab_count = 0]]
-      vim.cmd [[let g:airline#extensions#tabline#show_tab_nr = 0]]
-      vim.cmd [[let g:airline#extensions#tabline#show_splits = 1]]
-      vim.cmd [[let g:airline#extensions#tabline#show_buffers = 1]]
-      vim.cmd [[let g:airline#extensions#tabline#show_close_button = 0]]
-      vim.cmd [[let g:airline_powerline_fonts = 1]]
-    end
-  }
-
-  use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd([[colo base16-gruvbox-light-soft]])
+      vim.cmd([[colo base16-gruvbox-dark-medium]])
 
-      local colour7 = '#504945'
-      local colour8 = '#bdae93'
-      local colour9 = '#af3a03'
-      local colour10 = '#ebdbb2'
+      local colour7 = '#d5c4a1'
+      local colour8 = '#665c54'
+      local colour9 = '#fe8019'
+      local colour10 = '#3c3836'
 
       -- This is the Gruvbox dark soft background colour.
-      local popUpBackground = colour10
+      local popUpBackground = "#1d2021"
 
       -- Set vertical dividers to colour10
       vim.cmd(string.format([[highlight VertSplit guibg=none guifg=%s]], colour10))
