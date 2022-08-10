@@ -20,3 +20,6 @@ export DISABLE_SPRING=true
 
 # Make fzf pretty.
 export FZF_DEFAULT_OPTS=" -e --color fg:12,bg:0,hl:9,fg+:7,bg+:10,hl+:9,info:8,prompt:12,spinner:8,pointer:9"
+
+# Make bat pretty.
+export BAT_THEME="base16"
