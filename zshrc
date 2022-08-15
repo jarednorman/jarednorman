@@ -94,14 +94,14 @@ setopt prompt_subst
 ZLE_RPROMPT_INDENT=0
 
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}•'
-zstyle ':vcs_info:*' stagedstr '%{%F{green}%}•'
+zstyle ':vcs_info:*' unstagedstr '%{%F{1}%}+'
+zstyle ':vcs_info:*' stagedstr '%{%F{2}%}+'
 
-zstyle ':vcs_info:git:*' formats '%{%F{8}%}%b%c%u '
-zstyle ':vcs_info:git:*' actionformats '%{%F{11}%}%b[%{%F{11}%}%c%u%{%F{11}%}](%{%F{yellow}%}%a%F{11}%})'
+zstyle ':vcs_info:git:*' formats '%{%F{4}%}%b%c%u '
+zstyle ':vcs_info:git:*' actionformats '%{%F{4}%}%b[%{%F{11}%}%c%u%{%F{11}%}](%{%F{yellow}%}%a%F{11}%})'
 
 PROMPT='%{%F{12}%}%3~ ${vcs_info_msg_0_}%(1j.%F{8}(%{%F{13}%}%j%F{8}) .)
-%(?.%F{3}.%F{9})%(!.%{%F{9}%}#.$) '
+%(?.%F{2}.%F{9})%(!.%{%F{9}%}#.$) '
 RPROMPT='%(?..%F{11}[%F{9}%?%F{11}])'
 
 # Search for files quickly by path
