@@ -94,15 +94,15 @@ require('packer').startup(function(use)
   use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd([[colo base16-gruvbox-light-medium]])
+      vim.cmd([[colo base16-gruvbox-dark-medium]])
 
-      local colour7 = '#504945'
-      local colour8 = '#bdae93'
-      local colour9 = '#af2a03'
-      local colour10 = '#ebdbb2'
+      local colour7  = '#d5c4a1'
+      local colour8  = '#665c54'
+      local colour9  = '#fe8019'
+      local colour10 = '#3c3836'
 
-      -- This is the Gruvbox light soft background colour.
-      local popUpBackground = '#f2e5bc'
+      -- This is the Gruvbox dark hard background colour.
+      local popUpBackground = '#1d2021'
 
       -- Set vertical dividers to colour10
       vim.cmd(string.format([[highlight VertSplit guibg=none guifg=%s]], colour10))
