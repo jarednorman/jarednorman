@@ -1,8 +1,8 @@
 -- The final frontier.
 vim.g.mapleader = ' '
 
--- Shake your body like a salmon floatin' up stream!
-vim.o.shell = 'fish'
+-- Do not use mouse support.
+vim.o.mouse = ''
 
 -- I like pretty things.
 vim.o.termguicolors = true
