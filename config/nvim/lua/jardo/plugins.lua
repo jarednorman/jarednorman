@@ -94,15 +94,15 @@ require('packer').startup(function(use)
   use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd([[colo base16-gruvbox-dark-medium]])
+      vim.cmd([[colo base16-gruvbox-dark-hard]])
 
       local colour7  = '#d5c4a1'
       local colour8  = '#665c54'
       local colour9  = '#fe8019'
       local colour10 = '#3c3836'
 
-      -- This is the Gruvbox dark hard background colour.
-      local popUpBackground = '#1d2021'
+      -- This is the Gruvbox dark medium background colour.
+      local popUpBackground = '#282828'
 
       -- Set vertical dividers to colour10
       vim.cmd(string.format([[highlight VertSplit guibg=none guifg=%s]], colour10))
@@ -116,7 +116,7 @@ require('packer').startup(function(use)
       vim.cmd(string.format([[highlight TelescopeResultsTitle guibg=%s guifg=%s]], colour8, colour7))
       vim.cmd(string.format([[highlight TelescopePromptTitle guibg=%s guifg=%s]], colour8, colour7))
       vim.cmd(string.format([[highlight TelescopePreviewTitle guibg=%s guifg=%s]], colour8, colour7))
-      vim.cmd(string.format([[highlight TelescopeSelection guibg=%s guifg=%s gui=bold]], colour8, colour7))
+      vim.cmd(string.format([[highlight TelescopeSelection guibg=%s guifg=%s gui=bold]], colour10, colour7))
       vim.cmd(string.format([[highlight TelescopePromptPrefix guibg=%s guifg=%s gui=bold]], popUpBackground, colour7))
       vim.cmd(string.format([[highlight TelescopeMatching guibg=none guifg=%s gui=bold]], colour9))
     end
