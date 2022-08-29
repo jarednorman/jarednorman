@@ -100,14 +100,21 @@ require('packer').startup(function(use)
       local colour8  = '#665c54'
       local colour9  = '#fe8019'
       local colour10 = '#3c3836'
+      local colour13 = '#ebdbb2'
 
       -- This is the Gruvbox dark medium background colour.
       local popUpBackground = '#282828'
 
-      -- Set vertical dividers to colour10
-      vim.cmd(string.format([[highlight VertSplit guibg=none guifg=%s]], colour10))
+      -- Set status lines to be prettier
+      vim.cmd(string.format([[highlight StatusLine guibg=%s guifg=%s]], popUpBackground, colour13))
+      vim.cmd(string.format([[highlight StatusLineNC guibg=%s guifg=%s]], popUpBackground, colour10))
+
+      -- Set vertical dividers to be prettier.
+      vim.cmd(string.format([[highlight VertSplit guibg=none guifg=%s]], popUpBackground))
+
       -- Set line numbers to colour8
-      vim.cmd(string.format([[highlight LineNr guibg=none guifg=%s]], colour8))
+      vim.cmd(string.format([[highlight LineNr guibg=none guifg=%s]], colour10))
+
       -- Fix Telescope colours
       vim.cmd(string.format([[highlight TelescopeBorder guibg=%s guifg=%s]], popUpBackground, popUpBackground))
       vim.cmd(string.format([[highlight TelescopePromptBorder guibg=%s guifg=%s]], popUpBackground, popUpBackground))
