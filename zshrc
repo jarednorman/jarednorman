@@ -82,8 +82,8 @@ ZSH_HIGHLIGHT_STYLES[globbing]='fg=5'
 source ~/.zsh/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=2,bg=11"
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=9,bg=11"
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=0,bg=4,bold"
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=0,bg=1,bold"
 
 # Set custom prompt.
 autoload -U colors && colors
