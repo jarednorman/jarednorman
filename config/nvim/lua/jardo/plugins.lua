@@ -96,6 +96,7 @@ require('packer').startup(function(use)
     config = function()
       vim.cmd([[colo base16-gruvbox-dark-hard]])
 
+      local colour0  = '#1d2021'
       local colour7  = '#d5c4a1'
       local colour8  = '#665c54'
       local colour9  = '#fe8019'
@@ -109,11 +110,18 @@ require('packer').startup(function(use)
       vim.cmd(string.format([[highlight StatusLine guibg=%s guifg=%s]], popUpBackground, colour13))
       vim.cmd(string.format([[highlight StatusLineNC guibg=%s guifg=%s]], popUpBackground, colour8))
 
+      -- Set visual highlights to be prettier.
+      vim.cmd(string.format([[highlight Visual guibg=%s guifg=%s]], colour13, colour8))
+
       -- Set vertical dividers to be prettier.
       vim.cmd(string.format([[highlight VertSplit guibg=none guifg=%s]], popUpBackground))
 
       -- Set line numbers to colour8
       vim.cmd(string.format([[highlight LineNr guibg=none guifg=%s]], colour10))
+
+      -- Style search stuff consistently.
+      vim.cmd(string.format([[highlight IncSearch guibg=%s guifg=%s]], colour9, colour0))
+      vim.cmd(string.format([[highlight Search guibg=NONE guifg=%s gui=underline]], colour9))
 
       -- Fix Telescope colours
       vim.cmd(string.format([[highlight TelescopeBorder guibg=%s guifg=%s]], popUpBackground, popUpBackground))
