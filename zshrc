@@ -32,13 +32,14 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
 # Doomed to relive it.
-setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_REDUCE_BLANKS
+
+setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
@@ -68,15 +69,6 @@ eval "$(rbenv init - zsh)"
 
 # Set up fzf.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Set up syntax highlighting.
-source ~/.zsh/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# Information on controlling the highlight styles can be found here:
-# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md
-typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=9'
-ZSH_HIGHLIGHT_STYLES[path]='fg=3'
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=5'
 
 # Set up history substring search.
 source ~/.zsh/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh
