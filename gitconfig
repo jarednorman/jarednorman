@@ -40,8 +40,6 @@
   pager = diff-so-fancy | less --tabs=4 -RFX
 [credential]
   helper = cache --timeout=3600
-[format]
-  pretty = %C(8)%h %C(reset)%C(11)→ %C(reset)%s%C(reset) %C(2)%aN %C(8)%cd%C(3)%d
 [github]
   user = jarednorman
 [init]
@@ -63,6 +61,7 @@
 [advice]
 	skippedCherryPicks = false
 [alias]
+  l = "log --graph --format='%C(8)%h %C(reset)%C(11)→ %C(reset)%s%C(reset) %C(2)%aN %C(8)%cd%C(3)%d'"
 	sw = "!f(){ git switch $(git branch -l --sort=-committerdate --format=\"%(refname:short)\" --no-merged main | head -n 64 | fzf --preview \"git show --color=always {}\"); };f"
 [diff]
 	algorithm = histogram
