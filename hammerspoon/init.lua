@@ -10,8 +10,8 @@ local hotkey = function(index, applicationName)
  end)
 end
 
-hotkey("1", "Google Chrome")
-hotkey("2", "kitty")
-hotkey("3", "Slack")
-hotkey("4", "Obsidian")
+hotkey("1", "Obsidian")
+hotkey("2", "Google Chrome")
+hotkey("3", "kitty")
+hotkey("4", "Slack")
 hotkey("5", "Linear")
