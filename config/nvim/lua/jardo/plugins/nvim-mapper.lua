@@ -56,6 +56,41 @@ Mapper.map('n',
   "Clear search"
 )
 
+-- Tab Navigation
+Mapper.map('n',
+  '<leader>t',
+  '<cmd>tabnew<cr>',
+  {
+    silent = true,
+    noremap = true
+  },
+  "Tab navigation",
+  "new_tab",
+  "New tab"
+)
+Mapper.map('n',
+  '<leader><tab>',
+  '<cmd>tabnext<cr>',
+  {
+    silent = true,
+    noremap = true
+  },
+  "Tab navigation",
+  "next_tab",
+  "Next tab"
+)
+Mapper.map('n',
+  '<leader><s-tab>',
+  '<cmd>tabprev<cr>',
+  {
+    silent = true,
+    noremap = true
+  },
+  "Tab navigation",
+  "previous_tab",
+  "Previous tab"
+)
+
 -- Run tests.
 Mapper.map('n',
   '<leader>r',
