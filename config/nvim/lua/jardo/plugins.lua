@@ -75,20 +75,22 @@ require('packer').startup(function(use)
     end
   }
 
-  use {
-    'nvim-treesitter/playground',
-    requires = {
-      {'nvim-treesitter/nvim-treesitter'}
-    },
-    config = function()
-      vim.cmd [[nnoremap <leader>. :TSHighlightCapturesUnderCursor<cr>]]
-    end
-  }
+  -- use {
+  --   'nvim-treesitter/playground',
+  --   requires = {
+  --     {'nvim-treesitter/nvim-treesitter'}
+  --   },
+  --   config = function()
+  --     vim.cmd [[nnoremap <leader>. :TSHighlightCapturesUnderCursor<cr>]]
+  --   end
+  -- }
 
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() vim.cmd [[TSUpdate]] end,
-    config = function() require('jardo.plugins.treesitter') end
+    config = function()
+      require('jardo.plugins.treesitter')
+    end
   }
 
   use {
