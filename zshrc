@@ -86,14 +86,15 @@ setopt prompt_subst
 ZLE_RPROMPT_INDENT=0
 
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '%{%F{1}%}•'
-zstyle ':vcs_info:*' stagedstr '%{%F{2}%}•'
+zstyle ':vcs_info:*' unstagedstr '%{%F{9}%}+'
+zstyle ':vcs_info:*' stagedstr '%{%F{2}%}+'
 
-zstyle ':vcs_info:git:*' formats '%{%F{11}%}[%{%F{4}%}%b%c%u%{%F{11}%}]'
-zstyle ':vcs_info:git:*' actionformats '%{%F{11}%}[%{%F{4}%}%b%c%u%{%F{11}%}]|%{%F{3}%}%a%{%F{11}%}]'
+zstyle ':vcs_info:git:*' formats ' %{%F{11}%}[%{%F{6}%}%b%c%u%{%F{11}%}]'
+zstyle ':vcs_info:git:*' actionformats ' %{%F{11}%}[%{%F{6}%}%b%c%u%{%F{11}%}]|%{%F{3}%}%a%{%F{11}%}]'
 
-PROMPT='%{%F{4}%}%3~ %(?.%{%F{2}%}.%{%F{9}%})%(!.#.❯) %f'
-RPROMPT='%(1j.%{%F{11}%}[%{%F{5}%}%j%{%F{11}%}] .)${vcs_info_msg_0_}'
+PROMPT='%{%F{4}%}%3~${vcs_info_msg_0_} %(1j.%{%F{11}%}(%{%F{3}%}%j%{%F{11}%}).)
+%(?.%{%F{2}%}.%{%F{9}%})%(!.#.$) %f'
+RPROMPT=''
 
 # Search for files quickly by path
 function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
