@@ -19,26 +19,7 @@ require('packer').startup(function(use)
 
   use 'christoomey/vim-tmux-navigator'
 
-  use 'dag/vim-fish'
-
   use 'rescript-lang/vim-rescript'
-
-  use {
-    "dcampos/nvim-snippy",
-    config = function()
-      require("snippy").setup({
-        mappings = {
-          is = {
-            ["<Tab>"] = "expand_or_advance",
-            ["<S-Tab>"] = "previous",
-          },
-          nx = {
-            ["<leader>x"] = "cut_text",
-          },
-        },
-      })
-    end,
-  }
 
   use {
     "mileszs/ack.vim",
@@ -74,16 +55,6 @@ require('packer').startup(function(use)
       require("telescope").load_extension("fzf")
     end
   }
-
-  -- use {
-  --   'nvim-treesitter/playground',
-  --   requires = {
-  --     {'nvim-treesitter/nvim-treesitter'}
-  --   },
-  --   config = function()
-  --     vim.cmd [[nnoremap <leader>. :TSHighlightCapturesUnderCursor<cr>]]
-  --   end
-  -- }
 
   use {
     'nvim-treesitter/nvim-treesitter',
