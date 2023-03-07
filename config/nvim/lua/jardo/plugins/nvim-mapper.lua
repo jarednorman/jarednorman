@@ -104,6 +104,18 @@ Mapper.map('n',
   "Run RSpec on current file"
 )
 
+Mapper.map('n',
+  '<leader>f',
+  '<cmd>let @* = expand("%")<cr>',
+  {
+    silent = true,
+    noremap = true
+  },
+  "Misc",
+  "copy_filename",
+  "Copy the current file path to the clipboard"
+)
+
 Mapper.map(
   'n',
   '<leader>n',
