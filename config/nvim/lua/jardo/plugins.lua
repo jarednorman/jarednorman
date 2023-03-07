@@ -65,6 +65,14 @@ require('packer').startup(function(use)
   }
 
   use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    config = function()
+      require('lualine').setup()
+    end
+  }
+
+  use {
     'RRethy/nvim-base16',
     config = function()
       vim.cmd([[colo base16-gruvbox-light-soft]])
