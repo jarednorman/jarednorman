@@ -77,9 +77,9 @@ require('packer').startup(function(use)
   use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd([[colo base16-gruvbox-light-medium]])
+      vim.cmd([[colo base16-gruvbox-light-soft]])
 
-      local colour0  = '#fbf1c7'
+      local colour0  = '#f2e5bc'
       local colour7  = '#504945'
       local colour8  = '#bdae93'
       local colour9  = '#af3a03'
@@ -87,7 +87,7 @@ require('packer').startup(function(use)
       local colour13 = '#3c3836'
 
       -- Base16 Gruvbox Light Soft Background
-      local popUpBackground = '#f2e5bc'
+      local popUpBackground = colour10
 
       -- Set status lines to be prettier
       vim.cmd(string.format([[highlight StatusLine guibg=%s guifg=%s]], colour10, colour13))
