@@ -25,4 +25,4 @@ export FZF_DEFAULT_OPTS=" -e --color fg:12,bg:0,hl:9,fg+:7,bg+:10,hl+:9,info:8,p
 export BAT_THEME="base16"
 
 # Tell Neovim where it is.
-export VIMRUNTIME=/usr/local/share/nvim/runtime
+export VIMRUNTIME=/opt/homebrew/share/nvim/runtime
