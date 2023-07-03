@@ -8,6 +8,7 @@ fi
 
 export path=(
   $HOME/.bin
+   $(brew --prefix)/opt/libpq/bin
   $path
 )
 

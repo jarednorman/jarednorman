@@ -68,7 +68,7 @@ eval "$(fnm env --use-on-cd)"
 eval "$(rbenv init - zsh)"
 
 # Set up fzf.
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ] && source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
 
 # Set up history substring search.
 source ~/.zsh/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh
