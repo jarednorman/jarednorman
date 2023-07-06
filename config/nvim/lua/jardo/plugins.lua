@@ -11,6 +11,7 @@ require('packer').startup(function(use)
 
   -- Just tpope things.
   use 'tpope/vim-commentary'
+  use 'tpope/vim-dispatch'
   use 'tpope/vim-eunuch'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-repeat'
