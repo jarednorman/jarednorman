@@ -94,7 +94,7 @@ Mapper.map('n',
 -- Run tests.
 Mapper.map('n',
   '<leader>r',
-  '<cmd>:!bundle exec rspec %<cr>',
+  '<cmd>:Dispatch bundle exec rspec %<cr>',
   {
     silent = true,
     noremap = true
