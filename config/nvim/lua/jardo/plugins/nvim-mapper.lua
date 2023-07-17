@@ -128,3 +128,16 @@ Mapper.map(
   "toggle_numbers",
   "Toggle line numbers"
 )
+
+Mapper.map(
+  'n',
+  '<leader>c',
+  "<cmd>ccl<cr>",
+  {
+    silent = true,
+    noremap = true
+  },
+  "Misc",
+  "close_quickfix",
+  "Close the quickfix window"
+)
