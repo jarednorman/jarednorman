@@ -73,7 +73,33 @@ require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     config = function()
       require('lualine').setup {
-        options = { section_separators = '', component_separators = '' }
+        options = { section_separators = '', component_separators = '' },
+        tabline = {
+          lualine_a = {},
+          lualine_c = {
+            {
+              'tabs',
+               max_length = vim.o.columns,
+               mode = 1,
+               tabs_color = {
+                 active = { fg = '#fabd2f', bg = '#504945', gui='bold' },
+                 inactive = { fg = '665c54', bg = '#3c3836' },
+               },
+               fmt = function(name, context)
+                 -- Show + if buffer is modified in tab
+                 local buflist = vim.fn.tabpagebuflist(context.tabnr)
+                 local winnr = vim.fn.tabpagewinnr(context.tabnr)
+                 local bufnr = buflist[winnr]
+                 local mod = vim.fn.getbufvar(bufnr, '&mod')
+
+                 return name .. (mod == 1 and '+' or '')
+               end
+            }
+          },
+          lualine_x = {},
+          lualine_y = {},
+          lualine_z = {}
+        }
       }
     end
   }
