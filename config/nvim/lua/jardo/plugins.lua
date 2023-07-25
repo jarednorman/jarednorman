@@ -82,7 +82,7 @@ require('packer').startup(function(use)
                max_length = vim.o.columns,
                mode = 1,
                tabs_color = {
-                 active = { fg = '#fabd2f', bg = '#504945', gui='bold' },
+                 active = { fg = '#d5c4a1', bg = '#1d2021' },
                  inactive = { fg = '665c54', bg = '#3c3836' },
                },
                fmt = function(name, context)
