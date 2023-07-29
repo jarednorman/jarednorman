@@ -82,8 +82,8 @@ require('packer').startup(function(use)
                max_length = vim.o.columns,
                mode = 1,
                tabs_color = {
-                 active = { fg = '#504945', bg = '#f2e5bc' },
-                 inactive = { fg = '#bdae93', bg = '#ebdbb2' },
+                 active = { fg = '#d5c4a1', bg = '#1d2021' },
+                 inactive = { fg = '665c54', bg = '#3c3836' },
                },
                fmt = function(name, context)
                  -- Show + if buffer is modified in tab
@@ -107,17 +107,17 @@ require('packer').startup(function(use)
   use {
     'RRethy/nvim-base16',
     config = function()
-      vim.cmd([[colo base16-gruvbox-light-soft]])
+      vim.cmd([[colo base16-gruvbox-dark-hard]])
 
-      local colour0  = '#f2e5bc'
-      local colour7  = '#504945'
-      local colour8  = '#bdae93'
-      local colour9  = '#af3a03'
-      local colour10 = '#ebdbb2'
-      local colour13 = '#3c3836'
+      local colour0  = '#1d2021'
+      local colour7  = '#d5c4a1'
+      local colour8  = '#665c54'
+      local colour9  = '#fe8019'
+      local colour10 = '#3c3836'
+      local colour13 = '#ebdbb2'
 
-      -- Base16 Gruvbox Light Soft Background
-      local popUpBackground = colour10
+      -- Base16 Gruvbox Dark Medium Background
+      local popUpBackground = '#282828'
 
       -- Set status lines to be prettier
       vim.cmd(string.format([[highlight StatusLine guibg=%s guifg=%s]], colour10, colour13))
