@@ -81,10 +81,10 @@ require('packer').startup(function(use)
               'tabs',
                max_length = vim.o.columns,
                mode = 1,
-               tabs_color = {
-                 active = { fg = '#d5c4a1', bg = '#1d2021' },
-                 inactive = { fg = '665c54', bg = '#3c3836' },
-               },
+               -- tabs_color = {
+               --   active = { fg = '#d5c4a1', bg = '#1d2021' },
+               --   inactive = { fg = '665c54', bg = '#3c3836' },
+               -- },
                fmt = function(name, context)
                  -- Show + if buffer is modified in tab
                  local buflist = vim.fn.tabpagebuflist(context.tabnr)
@@ -105,48 +105,14 @@ require('packer').startup(function(use)
   }
 
   use {
-    'RRethy/nvim-base16',
+    "mcchrish/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    requires = "rktjmp/lush.nvim",
     config = function()
-      vim.cmd([[colo base16-gruvbox-dark-hard]])
-
-      local colour0  = '#1d2021'
-      local colour7  = '#d5c4a1'
-      local colour8  = '#665c54'
-      local colour9  = '#fe8019'
-      local colour10 = '#3c3836'
-      local colour13 = '#ebdbb2'
-
-      -- Base16 Gruvbox Dark Medium Background
-      local popUpBackground = '#282828'
-
-      -- Set status lines to be prettier
-      vim.cmd(string.format([[highlight StatusLine guibg=%s guifg=%s]], colour10, colour13))
-      vim.cmd(string.format([[highlight StatusLineNC guibg=%s guifg=%s]], colour10, colour8))
-
-      -- Set visual highlights to be prettier.
-      vim.cmd(string.format([[highlight Visual guibg=%s guifg=%s]], colour13, colour8))
-
-      -- Set vertical dividers to be prettier.
-      vim.cmd(string.format([[highlight VertSplit guibg=none guifg=%s]], colour10))
-
-      -- Set line numbers to colour8
-      vim.cmd(string.format([[highlight LineNr guibg=none guifg=%s]], colour10))
-
-      -- Style search stuff consistently.
-      vim.cmd(string.format([[highlight IncSearch guibg=%s guifg=%s]], colour9, colour0))
-      vim.cmd(string.format([[highlight Search guibg=NONE guifg=%s gui=underline]], colour9))
-
-      -- Fix Telescope colours
-      vim.cmd(string.format([[highlight TelescopeBorder guibg=%s guifg=%s]], popUpBackground, popUpBackground))
-      vim.cmd(string.format([[highlight TelescopePromptBorder guibg=%s guifg=%s]], popUpBackground, popUpBackground))
-      vim.cmd(string.format([[highlight TelescopeNormal guibg=%s guifg=%s]], popUpBackground, colour7))
-      vim.cmd(string.format([[highlight TelescopePromptNormal guibg=%s guifg=%s]], popUpBackground, colour7))
-      vim.cmd(string.format([[highlight TelescopeResultsTitle guibg=%s guifg=%s]], colour8, colour7))
-      vim.cmd(string.format([[highlight TelescopePromptTitle guibg=%s guifg=%s]], colour8, colour7))
-      vim.cmd(string.format([[highlight TelescopePreviewTitle guibg=%s guifg=%s]], colour8, colour7))
-      vim.cmd(string.format([[highlight TelescopeSelection guibg=%s guifg=%s gui=bold]], colour10, colour7))
-      vim.cmd(string.format([[highlight TelescopePromptPrefix guibg=%s guifg=%s gui=bold]], popUpBackground, colour7))
-      vim.cmd(string.format([[highlight TelescopeMatching guibg=none guifg=%s gui=bold]], colour9))
+      vim.cmd([[set background=light]])
+      vim.cmd([[colo zenbones]])
     end
   }
 end)
