@@ -81,10 +81,6 @@ require('packer').startup(function(use)
               'tabs',
                max_length = vim.o.columns,
                mode = 1,
-               -- tabs_color = {
-               --   active = { fg = '#d5c4a1', bg = '#1d2021' },
-               --   inactive = { fg = '665c54', bg = '#3c3836' },
-               -- },
                fmt = function(name, context)
                  -- Show + if buffer is modified in tab
                  local buflist = vim.fn.tabpagebuflist(context.tabnr)
@@ -105,14 +101,11 @@ require('packer').startup(function(use)
   }
 
   use {
-    "mcchrish/zenbones.nvim",
-    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-    -- In Vim, compat mode is turned on as Lush only works in Neovim.
-    requires = "rktjmp/lush.nvim",
+    "catppuccin/nvim",
+    as = "catppuccin",
     config = function()
-      vim.cmd([[set background=light]])
-      vim.cmd([[colo zenbones]])
+      vim.cmd([[set background=dark]])
+      vim.cmd([[colo catppuccin]])
     end
   }
 end)

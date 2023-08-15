@@ -20,7 +20,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export DISABLE_SPRING=true
 
 # Make fzf pretty.
-export FZF_DEFAULT_OPTS=" -e --color fg:12,bg:0,hl:9,fg+:7,bg+:10,hl+:9,info:8,prompt:12,spinner:8,pointer:9"
+export FZF_DEFAULT_OPTS=" -e --color fg:#585B70,bg:#1E1E2E,hl:#F9E2AF,fg+:#1E1E2E,bg+:#F5E0DC,hl+:9,info:8,prompt:12,spinner:8,pointer:9"
 
 # Make bat pretty.
 export BAT_THEME="base16"
