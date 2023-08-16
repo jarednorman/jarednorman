@@ -32,6 +32,38 @@ require('packer').startup(function(use)
   }
 
   use {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require'lspconfig'.tsserver.setup {}
+
+      -- Use LspAttach autocommand to only map the following keys after the
+      -- language server attaches to the current buffer.
+      vim.api.nvim_create_autocmd('LspAttach', {
+        group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+        callback = function(ev)
+          -- Enable completion triggered by <c-x><c-o>
+          vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+          -- Buffer local mappings.
+          -- See `:help vim.lsp.*` for documentation on any of the below functions
+          local opts = { buffer = ev.buf }
+
+          vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+          vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+          vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+          vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
+          vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+          vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+          vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+          vim.keymap.set('n', '<space>f', function()
+            vim.lsp.buf.format { async = true }
+          end, opts)
+        end,
+      })
+    end
+  }
+
+  use {
     "lazytanuki/nvim-mapper",
     config = function()
       require("nvim-mapper").setup{}
@@ -79,17 +111,17 @@ require('packer').startup(function(use)
           lualine_c = {
             {
               'tabs',
-               max_length = vim.o.columns,
-               mode = 1,
-               fmt = function(name, context)
-                 -- Show + if buffer is modified in tab
-                 local buflist = vim.fn.tabpagebuflist(context.tabnr)
-                 local winnr = vim.fn.tabpagewinnr(context.tabnr)
-                 local bufnr = buflist[winnr]
-                 local mod = vim.fn.getbufvar(bufnr, '&mod')
+              max_length = vim.o.columns,
+              mode = 1,
+              fmt = function(name, context)
+                -- Show + if buffer is modified in tab
+                local buflist = vim.fn.tabpagebuflist(context.tabnr)
+                local winnr = vim.fn.tabpagewinnr(context.tabnr)
+                local bufnr = buflist[winnr]
+                local mod = vim.fn.getbufvar(bufnr, '&mod')
 
-                 return name .. (mod == 1 and '+' or '')
-               end
+                return name .. (mod == 1 and '+' or '')
+              end
             }
           },
           lualine_x = {},
