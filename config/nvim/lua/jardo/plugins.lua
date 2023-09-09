@@ -35,6 +35,7 @@ require('packer').startup(function(use)
     "neovim/nvim-lspconfig",
     config = function()
       require'lspconfig'.tsserver.setup {}
+      require'lspconfig'.ruby_ls.setup{}
 
       -- Use LspAttach autocommand to only map the following keys after the
       -- language server attaches to the current buffer.
