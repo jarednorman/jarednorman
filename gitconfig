@@ -64,5 +64,6 @@
   l = "log --graph --format='%C(8)%h %C(reset)%C(11)→ %C(reset)%s%C(reset) %C(2)%aN %C(8)%cd%C(3)%d'"
 	sw = "!f(){ git switch $(git branch -l --sort=-committerdate --format=\"%(refname:short)\" --no-merged main | head -n 64 | fzf --preview \"git show --color=always {}\"); };f"
   wip = "commit -nam WIP"
+  unwip = "reset HEAD~1"
 [diff]
 	algorithm = histogram
