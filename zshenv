@@ -24,7 +24,10 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export DISABLE_SPRING=true
 
 # Make fzf pretty.
-export FZF_DEFAULT_OPTS=" -e --color fg:8,bg:0,hl:5,fg+:7,bg+:8,hl+:5,info:5,prompt:5,spinner:5,pointer:5"
+export FZF_DEFAULT_OPTS=" -e --color fg:#585B70,bg:#1E1E2E,hl:#F9E2AF,fg+:#1E1E2E,bg+:#F5E0DC,hl+:9,info:8,prompt:12,spinner:8,pointer:9"
+
+# Make bat pretty.
+export BAT_THEME="base16"
 
 # Tell Neovim where it is.
 export VIMRUNTIME=/opt/homebrew/share/nvim/runtime
