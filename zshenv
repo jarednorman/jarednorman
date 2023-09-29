@@ -6,8 +6,12 @@ if [[ -f /opt/homebrew/bin/brew ]]; then
   eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+
 export path=(
   $HOME/.bin
+  $BUN_INSTALL/bin
    $(brew --prefix)/opt/libpq/bin
   $path
 )

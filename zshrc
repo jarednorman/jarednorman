@@ -103,3 +103,6 @@ function tgem() {
   GEM_NAME="$(bundle list --name-only | fzf)"
   tmux new-window -c "$(bundle info --path $GEM_NAME)" -n "$GEM_NAME"
 }
+
+# bun completions
+[ -s "/Users/jardo/.bun/_bun" ] && source "/Users/jardo/.bun/_bun"
