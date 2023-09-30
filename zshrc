@@ -74,8 +74,8 @@ eval "$(rbenv init - zsh)"
 source ~/.zsh/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=0,bg=4,bold"
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=0,bg=1,bold"
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=4,underline"
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=1,underline"
 
 # Set custom prompt.
 autoload -U colors && colors
@@ -89,8 +89,8 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%{%F{9}%}+'
 zstyle ':vcs_info:*' stagedstr '%{%F{2}%}+'
 
-zstyle ':vcs_info:git:*' formats ' %{%F{11}%}[%{%F{6}%}%b%c%u%{%F{11}%}]'
-zstyle ':vcs_info:git:*' actionformats ' %{%F{11}%}[%{%F{6}%}%b%c%u%{%F{11}%}]|%{%F{3}%}%a%{%F{11}%}]'
+zstyle ':vcs_info:git:*' formats ' %{%F{7}%}[%{%B%}%b%{%%b%}%c%u%{%F{7}%}]'
+zstyle ':vcs_info:git:*' actionformats ' %{%F{7}%}[%b%c%u%{%F{7}%}]|%{%F{3}%}%a%{%F{11}%}]'
 
 PROMPT='%{%F{4}%}%3~${vcs_info_msg_0_} %(1j.%{%F{11}%}(%{%F{3}%}%j%{%F{11}%}).)
 %(?.%{%F{2}%}.%{%F{9}%})%(!.#.$) %f'
