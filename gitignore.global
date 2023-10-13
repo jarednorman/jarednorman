@@ -37,3 +37,4 @@ vendor/bundle
 .vscode
 .projections.json
 .envrc
+*.code-workspace
