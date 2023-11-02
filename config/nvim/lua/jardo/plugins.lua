@@ -132,11 +132,14 @@ require('packer').startup(function(use)
   }
 
   use {
-    "catppuccin/nvim",
-    as = "catppuccin",
+    "mcchrish/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    requires = "rktjmp/lush.nvim",
     config = function()
-      -- vim.cmd([[set background=light]])
-      vim.cmd([[colo catppuccin-mocha]])
+      vim.cmd([[set background=light]])
+      vim.cmd([[colo zenbones]])
     end
   }
 end)
