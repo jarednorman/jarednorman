@@ -91,19 +91,6 @@ Mapper.map('n',
   "Previous tab"
 )
 
--- Run tests.
-Mapper.map('n',
-  '<leader>r',
-  '<cmd>:Dispatch bundle exec rspec %<cr>',
-  {
-    silent = true,
-    noremap = true
-  },
-  "External commands",
-  "rspec",
-  "Run RSpec on current file"
-)
-
 Mapper.map('n',
   '<leader>f',
   '<cmd>let @* = expand("%")<cr>',
