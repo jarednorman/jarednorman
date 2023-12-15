@@ -135,7 +135,7 @@ require('packer').startup(function(use)
     "catppuccin/nvim",
     as = "catppuccin",
     config = function()
-      vim.cmd([[set background=dark]])
+      vim.cmd([[set background=light]])
       vim.cmd([[colo catppuccin]])
     end
   }
