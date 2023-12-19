@@ -1,2 +1,0 @@
-:echo "Use Neovim!"
-:q
