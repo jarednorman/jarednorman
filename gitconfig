@@ -67,3 +67,5 @@
   unwip = "reset HEAD~1"
 [diff]
 	algorithm = histogram
+[gpg]
+	program = /opt/homebrew/bin/gpg

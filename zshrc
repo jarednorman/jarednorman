@@ -9,6 +9,9 @@ setopt AUTOCD
 bindkey -v
 export EDITOR=nvim
 
+# Do GPG
+export GPG_TTY=$(tty)
+
 # Auto-escape URLs.
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
