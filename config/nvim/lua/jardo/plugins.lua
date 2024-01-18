@@ -36,6 +36,7 @@ require('packer').startup(function(use)
     config = function()
       require'lspconfig'.tsserver.setup {}
       require'lspconfig'.ruby_ls.setup{}
+      require'lspconfig'.rescriptls.setup{}
 
       -- Use LspAttach autocommand to only map the following keys after the
       -- language server attaches to the current buffer.
