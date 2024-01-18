@@ -133,10 +133,13 @@ require('packer').startup(function(use)
   }
 
   use {
-    "EdenEast/nightfox.nvim",
+    "sainnhe/gruvbox-material",
     config = function()
-      vim.cmd([[set background=light]])
-      vim.cmd([[colo dayfox]])
+      vim.cmd([[set background=dark]])
+      vim.cmd([[let g:gruvbox_material_background = 'hard']])
+      vim.cmd([[let g:gruvbox_material_better_performance = 1]])
+      vim.cmd([[colo gruvbox-material]])
+      vim.cmd([[highlight VertSplit guifg=#282828]])
     end
   }
 end)
