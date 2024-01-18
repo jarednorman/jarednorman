@@ -133,11 +133,10 @@ require('packer').startup(function(use)
   }
 
   use {
-    "catppuccin/nvim",
-    as = "catppuccin",
+    "EdenEast/nightfox.nvim",
     config = function()
-      vim.cmd([[set background=dark]])
-      vim.cmd([[colo catppuccin]])
+      vim.cmd([[set background=light]])
+      vim.cmd([[colo dayfox]])
     end
   }
 end)
