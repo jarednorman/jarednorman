@@ -38,3 +38,6 @@ vim.o.lazyredraw = true
 vim.o.timeoutlen = 1000
 vim.o.ttimeoutlen = 0
 vim.o.updatetime = 50
+
+vim.o.list = true
+vim.o.listchars = "trail:␣"
