@@ -135,11 +135,11 @@ require('packer').startup(function(use)
   use {
     "sainnhe/gruvbox-material",
     config = function()
-      vim.cmd([[set background=dark]])
-      vim.cmd([[let g:gruvbox_material_background = 'hard']])
+      vim.cmd([[set background=light]])
+      vim.cmd([[let g:gruvbox_material_background = 'soft']])
       vim.cmd([[let g:gruvbox_material_better_performance = 1]])
       vim.cmd([[colo gruvbox-material]])
-      vim.cmd([[highlight VertSplit guifg=#282828]])
+      vim.cmd([[highlight VertSplit guifg=#e8dcb7]])
     end
   }
 end)
