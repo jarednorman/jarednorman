@@ -102,9 +102,9 @@ RPROMPT=''
 # Search for files quickly by path
 function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
 
-function tgem() {
+function zgem() {
   GEM_NAME="$(bundle list --name-only | fzf)"
-  tmux new-window -c "$(bundle info --path $GEM_NAME)" -n "$GEM_NAME"
+  zed "$(bundle info --path $GEM_NAME)"
 }
 
 # bun completions
