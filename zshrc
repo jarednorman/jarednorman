@@ -59,9 +59,9 @@ bindkey -M main ' ' expand-alias
 alias be="bundle exec"
 alias ber="bundle exec rspec"
 alias g="git"
-alias x="exa -G"
-alias xl="exa -l --git "
-alias xt="exa -T"
+alias x="eza -G"
+alias xl="eza -l --git "
+alias xt="eza -T"
 
 # Enable fnm and automatically use the correct node.js version when changing
 # directories.
