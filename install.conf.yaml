@@ -19,6 +19,7 @@
     ~/.bundle/config: bundler_config
     ~/.config/kitty: config/kitty
     ~/.config/nvim: config/nvim
+    ~/.config/zed/settings.json: config/zed/settings.json
     ~/.gitconfig: gitconfig
     ~/.gitignore.global: gitignore.global
     ~/.hammerspoon/Spoons: hammerspoon/Spoons
