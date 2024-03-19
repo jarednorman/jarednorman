@@ -5,9 +5,6 @@
 printf "%s\n" "System - Disable boot sound effects."
 sudo nvram SystemAudioVolume=" "
 
-printf "%s\n" "System - Reveal IP address, hostname, OS version, etc. when clicking login window clock."
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
 printf "%s\n" "System - Disable automatic termination of inactive apps."
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
