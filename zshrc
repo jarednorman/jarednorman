@@ -109,3 +109,4 @@ function zgem() {
 
 # bun completions
 [ -s "/Users/jardo/.bun/_bun" ] && source "/Users/jardo/.bun/_bun"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
