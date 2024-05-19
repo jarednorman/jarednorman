@@ -25,6 +25,9 @@
     "CSS": {
       "tab_size": 2
     },
+    "SCSS": {
+      "tab_size": 2
+    },
     "ERB": {
       "tab_size": 2
     }
