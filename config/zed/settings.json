@@ -21,6 +21,12 @@
   "languages": {
     "Ruby": {
       "tab_size": 2
+    },
+    "CSS": {
+      "tab_size": 2
+    },
+    "ERB": {
+      "tab_size": 2
     }
   }
 }
