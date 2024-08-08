@@ -69,7 +69,5 @@
 	algorithm = histogram
 [gpg]
 	program = /opt/homebrew/bin/gpg
-[blame]
-	ignoreRevsFile = .git-blame-ignore-revs
 [branch]
 	sort = -committerdate
