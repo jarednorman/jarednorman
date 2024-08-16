@@ -31,3 +31,4 @@
     ~/.zsh/vendor: zsh/vendor
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
+    ~/.ocamlinit: ocamlinit
