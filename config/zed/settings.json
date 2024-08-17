@@ -15,8 +15,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Rosé Pine Dawn",
-    "dark": "Rosé Pine"
+    "light": "Gruvbox Light Soft",
+    "dark": "Gruvbox Dark Hard"
   },
   "ui_font_family": "JetBrains Mono NL",
   "ui_font_size": 12,

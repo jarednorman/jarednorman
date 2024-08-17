@@ -58,11 +58,11 @@ require('packer').startup(function(use)
     }
 
     use {
-        "rose-pine/neovim",
-        as = "rose-pine",
+        "morhetz/gruvbox",
         config = function()
             vim.cmd([[set background=dark]])
-            vim.cmd([[colo rose-pine]])
+            vim.cmd([[let g:gruvbox_contrast_dark = 'hard']])
+            vim.cmd([[colo gruvbox]])
         end
     }
 end)
