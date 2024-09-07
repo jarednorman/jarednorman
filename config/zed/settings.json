@@ -1,6 +1,6 @@
 {
   "inline_completions": {
-    "disabled_globs": [".env", "app/vite/ContentBlocks/App.res"]
+    "disabled_globs": [".env", "**/*.res"]
   },
   "assistant": {
     "version": "2",
@@ -9,7 +9,7 @@
       "model": "claude-3-5-sonnet-20240620"
     }
   },
-  "show_inline_completions": false,
+  "show_inline_completions": true,
   "telemetry": {
     "metrics": false
   },
@@ -18,10 +18,10 @@
     "light": "Rosé Pine Dawn",
     "dark": "Rosé Pine"
   },
-  "ui_font_family": "JetBrains Mono NL",
+  "ui_font_family": "MonoLisa",
   "ui_font_size": 12,
-  "buffer_font_family": "JetBrains Mono NL",
-  "buffer_font_size": 13,
+  "buffer_font_family": "MonoLisa",
+  "buffer_font_size": 12,
   "buffer_font_features": {
     "calt": false
   },
@@ -33,6 +33,9 @@
   "soft_wrap": "editor_width",
   "use_autoclose": false,
   "languages": {
+    "ReScript": {
+      "show_inline_completions": false
+    },
     "Ruby": {
       "tab_size": 2,
       "language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
