@@ -61,8 +61,8 @@ require('packer').startup(function(use)
         "rose-pine/neovim",
         as = "rose-pine",
         config = function()
-            vim.cmd([[set background=light]])
-            vim.cmd([[colo rose-pine-dawn]])
+            vim.cmd([[set background=dark]])
+            vim.cmd([[colo rose-pine]])
         end
     }
 end)
