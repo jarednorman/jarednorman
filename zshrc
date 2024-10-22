@@ -68,18 +68,26 @@ alias zta="eza -T --git -a"
 
 # Enable fnm and automatically use the correct node.js version when changing
 # directories.
-eval "$(fnm env --use-on-cd)"
+# fnm
+FNM_PATH="/home/jardo/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/jardo/.local/share/fnm:$PATH"
+  eval "`fnm env --use-on-cd`"
+fi
+
+export PATH=$HOME/.local/bin:$PATH
 
 # Initialize rbenv.
 eval "$(rbenv init - zsh)"
 
 # Set up fzf.
 [ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ] && source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # Set up history substring search.
 source ~/.zsh/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=2,fg=#191724"
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="bg=1,fg=#191724"
 
@@ -109,11 +117,6 @@ function zgem() {
   GEM_NAME="$(bundle list --name-only | fzf)"
   zed "$(bundle info --path $GEM_NAME)"
 }
-
-# bun completions
-[ -s "/Users/jardo/.bun/_bun" ] && source "/Users/jardo/.bun/_bun"
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
-
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
