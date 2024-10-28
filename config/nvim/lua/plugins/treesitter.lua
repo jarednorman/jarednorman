@@ -12,6 +12,7 @@ return {{
         "python",
         "rust",
         "typescript",
+        "rescript",
         "ruby",
         "tsx",
         "markdown",
