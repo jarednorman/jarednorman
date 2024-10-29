@@ -10,12 +10,15 @@ return {
         transparency = false,
       },
       highlight_groups = {
-        WinSeparator = { fg = "surface", bg = "base" },
+        WinSeparator = { fg = "overlay", bg = "base" },
+        StatusLine = { bg = "overlay", fg = "subtle" },
+        StatusLineNC = { bg = "overlay", fg = "muted" },
+        NonText = { fg = "muted" }
       },
     },
     init = function()
-      vim.o.background = dark
-      vim.cmd [[colorscheme rose-pine]]
+      vim.o.background = light
+      vim.cmd [[colorscheme rose-pine-dawn]]
     end,
   }
 }
