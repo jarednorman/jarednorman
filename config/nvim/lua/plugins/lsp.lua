@@ -4,6 +4,8 @@ return {
     local lspconfig = require('lspconfig')
     lspconfig.ts_ls.setup({})
     lspconfig.rescriptls.setup({})
+    lspconfig.cssls.setup({})
+
     lspconfig.ruby_lsp.setup({
       init_options = {
         formatter = 'standard',
