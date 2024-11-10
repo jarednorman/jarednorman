@@ -7,7 +7,7 @@
     "version": "2",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest"
     }
   },
   "show_inline_completions": true,

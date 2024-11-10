@@ -17,8 +17,8 @@ return {
       },
     },
     init = function()
-      vim.o.background = light
-      vim.cmd [[colorscheme rose-pine-dawn]]
+      vim.cmd [[set background=dark]]
+      vim.cmd [[colorscheme rose-pine]]
     end,
   }
 }

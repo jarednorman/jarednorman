@@ -90,8 +90,8 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=2,fg=#fffaf3"
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="bg=1,fg=#fffaf3"
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=3,underline"
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=1,underline"
 
 autoload -U colors && colors
 
@@ -104,6 +104,11 @@ function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
 function tgem() {
   GEM_NAME="$(bundle list --name-only | fzf)"
   tmux new-window -c "$(bundle info --path $GEM_NAME)" -n "$GEM_NAME"
+}
+
+function zgem() {
+  GEM_NAME="$(bundle list --name-only | fzf)"
+  zed "$(bundle info --path $GEM_NAME)"
 }
 
 # BEGIN opam configuration
