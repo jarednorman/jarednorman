@@ -16,13 +16,13 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Rosé Pine Dawn",
+    "light": "Rosé Pine",
     "dark": "Rosé Pine"
   },
   "ui_font_family": "JetBrains Mono NL",
-  "ui_font_size": 13,
+  "ui_font_size": 12,
   "buffer_font_family": "JetBrains Mono NL",
-  "buffer_font_size": 13,
+  "buffer_font_size": 12,
   "buffer_font_features": {
     "calt": false
   },
