@@ -15,7 +15,6 @@
     - ~/.zsh
 
 - link:
-    ~/.bin: bin
     ~/.bundle/config: bundler_config
     ~/.config/kitty: config/kitty
     ~/.config/nvim: config/nvim
