@@ -65,6 +65,13 @@
         },
         "formatter": "standard"
       }
+    },
+    "rescript-language-server": {
+      "initialization_options": {
+        "extensionConfiguration": {
+          "askToStartBuild": false
+        }
+      }
     }
   }
 }
