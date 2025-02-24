@@ -68,12 +68,7 @@ alias zta="eza -T --git -a"
 
 # Enable fnm and automatically use the correct node.js version when changing
 # directories.
-# fnm
-FNM_PATH="$HOME/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env --use-on-cd --shell zsh)"
-fi
+eval "`fnm env --use-on-cd`"
 
 export PATH=$HOME/.local/bin:$PATH
 

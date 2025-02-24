@@ -71,7 +71,8 @@
       "initialization_options": {
         "enabledFeatures": {
           "diagnostics": false,
-          "formatting": true
+          "formatting": true,
+          "onTypeFormatting": false
         },
         "formatter": "standard"
       }
