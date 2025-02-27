@@ -16,7 +16,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Soft",
+    "light": "Catppuccin Latte",
     "dark": "Rosé Pine"
   },
   "ui_font_family": "MonoLisa",
