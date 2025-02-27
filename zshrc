@@ -77,6 +77,8 @@ fi
 
 export PATH=$HOME/.local/bin:$PATH
 
+[ -d $HOME/.nimble/bin ] && export PATH=$HOME/.nimble/bin:$PATH
+
 # Initialize rbenv.
 eval "$(rbenv init - zsh)"
 
