@@ -8,6 +8,7 @@ fi
 
 export path=(
   $HOME/.bin
+  $HOME/.zig
   $path
 )
 
