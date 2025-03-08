@@ -16,7 +16,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
+    "light": "Rosé Pine",
     "dark": "Rosé Pine"
   },
   "ui_font_family": "MonoLisa",
@@ -24,8 +24,8 @@
   "buffer_font_family": "MonoLisa",
   "buffer_font_size": 12,
   "buffer_font_features": {
-    // "calt": false,
-    //"liga": false
+    "calt": false,
+    "liga": false
   },
   "git": {
     "inline_blame": {
