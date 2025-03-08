@@ -1,21 +1,37 @@
 [color]
-  ; branch = auto
-  ; diff = auto
-  ; status = auto
-  ; ui = true
+  branch = auto
+  diff = auto
+  status = auto
+  ui = true
 [color "branch"]
-  current = "3"
+  current = "14 bold"
+  local = 12
   plain = "#ff00ff" # what is?
-  remote = 15
+  remote = 8
   upstream = "#ff00ff" # what is?
+[color "diff"]
+  commit = 3
+  context = "#ff00ff" # what is?
+  frag = "#797593 bold"
+  func = "#797593 nobold"
+  meta = "#907aa9"
+  new = "#56949f"
+  old = "#b4637a"
+  plain = "#9893a5"
+  whitespace = 1 reverse
+[color "diff-highlight"]
+  newHighlight = 2 bold
+  newNormal = 2
+  oldHighlight = 1 bold
+  oldNormal = 9
 [color "status"]
-  added = 6
-  branch = 3
-  nobranch = 1 bold
-  unmerged = 1 bold
-  changed = 5
-  header = "#6c7086"
-  untracked = "#f5e0dc"
+  added = 2
+  branch = 4 bold
+  changed = 3
+  header = 8
+  nobranch = 9 bold
+  unmerged = 9 bold
+  untracked = 4
 [commit]
   verbose = true
 [core]
@@ -45,7 +61,7 @@
 [advice]
 	skippedCherryPicks = false
 [alias]
-  l = "log --graph --format='%C(8)%h %C(reset)%C(15)→ %C(reset)%s%C(reset) %C(6)%aN %C(8)%cd%C(5)%d'"
+  l = "log --graph --format='%C(8)%h %C(reset)%C(11)→ %C(reset)%s%C(reset) %C(2)%aN %C(8)%cd%C(3)%d'"
 	sw = "!f(){ git switch $(git branch -l --sort=-committerdate --format=\"%(refname:short)\" --no-merged main | head -n 64 | fzf --preview \"git show --color=always {}\"); };f"
   wip = "commit -nam WIP"
   unwip = "reset HEAD~1"
