@@ -92,7 +92,7 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=2,underline"
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=3,underline"
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=1,underline"
 
 autoload -U colors && colors
