@@ -19,10 +19,10 @@
     "light": "Rosé Pine",
     "dark": "Rosé Pine"
   },
-  "ui_font_family": "MonoLisa",
-  "ui_font_size": 12,
-  "buffer_font_family": "MonoLisa",
-  "buffer_font_size": 12,
+  "ui_font_family": "JetBrains Mono NL",
+  "ui_font_size": 13,
+  "buffer_font_family": "JetBrains Mono NL",
+  "buffer_font_size": 13,
   "buffer_font_features": {
     "calt": false,
     "liga": false
