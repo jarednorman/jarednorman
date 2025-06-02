@@ -8,10 +8,11 @@
     "disabled_globs": [".env"]
   },
   "assistant": {
+    "always_allow_tool_actions": true,
     "version": "2",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-3-7-sonnet-thinking-latest"
     }
   },
   "telemetry": {
