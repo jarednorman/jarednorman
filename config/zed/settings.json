@@ -7,15 +7,17 @@
   "edit_predictions": {
     "disabled_globs": [".env"]
   },
-  "assistant": {
+  "agent": {
+    "enabled": false,
     "always_allow_tool_actions": true,
     "version": "2",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-3-7-sonnet-thinking-latest"
+      "model": "claude-sonnet-4-thinking-latest"
     }
   },
   "telemetry": {
+    "diagnostics": false,
     "metrics": false
   },
   "theme": {
