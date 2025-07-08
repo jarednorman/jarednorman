@@ -15,6 +15,7 @@
     - ~/.zsh
 
 - link:
+    ~/.Brewfile: Brewfile
     ~/.bundle/config: bundler_config
     ~/.config/kitty: config/kitty
     ~/.config/nvim: config/nvim
