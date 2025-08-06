@@ -1,4 +1,5 @@
-# No-op by default; the desktop commit overrides this to size the pane.
+# Desktop: give the claude pane a fixed width, rest goes to the other pane.
 function resize_claude_pane
-    return 0
+    set -q TMUX_PANE; or return 0
+    tmux resize-pane -t $TMUX_PANE -x 110
 end

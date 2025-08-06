@@ -1,18 +1,20 @@
-hs.loadSpoon('ControlEscape'):start()
+local function bindPosition(key, fraction)
+    hs.hotkey.bind({ "ctrl", "alt", "cmd" }, key, function()
+        local win = hs.application.frontmostApplication():focusedWindow()
+        if not win then return end
+        local screen = win:screen()
+        if not screen then return end
 
-hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "n", function()
-    local win = hs.application.frontmostApplication():focusedWindow()
-    local screen = win:screen()
-    -- Get the usable frame (excludes menubar and dock)
-    local frame = screen:frame()
+        -- screen:frame() excludes the menubar and dock
+        local frame = screen:frame()
+        local f = win:frame()
+        win:setTopLeft({
+            x = math.floor(frame.x + frame.w * fraction - f.w / 2),
+            y = frame.y,
+        })
+    end)
+end
 
-    local w = 1464
-    local h = 894
-
-    win:setFrame({
-        x = frame.x + (frame.w - w) / 2,
-        y = frame.y + (frame.h - h) / 2,
-        w = w,
-        h = h
-    })
-end)
+bindPosition("y", 0.25)
+bindPosition("n", 0.5)
+bindPosition("i", 0.75)

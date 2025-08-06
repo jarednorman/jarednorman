@@ -1,6 +1,6 @@
 # Font
 font-family = MonoLisa
-font-size = 11
+font-size = 14
 
 # Window
 window-padding-x = 0
@@ -19,7 +19,7 @@ shell-integration-features = no-cursor
 copy-on-select = clipboard
 
 # Colors
-theme = Catppuccin Latte
+theme = Catppuccin Mocha
 
 # Keybindings
 keybind = shift+enter=text:\x1b\r
