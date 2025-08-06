@@ -1,13 +1,15 @@
 # Font
 font-family = MonoLisa
-font-size = 11
+font-size = 16
 
 # Window
-window-padding-x = 4
-window-padding-y = 4
-window-padding-balance = true
+window-width = 120
+window-height = 76
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = equal
 window-decoration = none
-maximize = true
+maximize = false
 confirm-close-surface = false
 
 # Cursor
