@@ -81,7 +81,7 @@ printf "%s\n" "Dock - Don’t show Dashboard as a Space."
 defaults write com.apple.dock "dashboard-in-overlay" -bool true
 
 printf "%s\n" "Dock - Set dock size."
-defaults write com.apple.dock tilesize -int 64
+defaults write com.apple.dock tilesize -int 43
 
 printf "%s\n" "Dock - Change minimize effect."
 defaults write com.apple.dock mineffect -string "scale"
