@@ -1,4 +1,4 @@
-hs.loadSpoon('ControlEscape'):start()
+-- hs.loadSpoon('ControlEscape'):start()
 
 hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "n", function()
     local win = hs.application.frontmostApplication():focusedWindow()
@@ -6,8 +6,8 @@ hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "n", function()
     -- Get the usable frame (excludes menubar and dock)
     local frame = screen:frame()
 
-    local w = 1397
-    local h = 851
+    local w = 2809
+    local h = 1411
 
     win:setFrame({
         x = frame.x + (frame.w - w) / 2,

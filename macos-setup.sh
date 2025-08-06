@@ -68,7 +68,7 @@ printf "%s\n" "Bluetooth - Increase sound quality for headphones/headsets."
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 printf "%s\n" "Dock - Automatically hide and show."
-defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool false
 
 printf "%s\n" "Dock - Remove the auto-hiding delay and animation."
 defaults write com.apple.Dock autohide-delay -float 0
