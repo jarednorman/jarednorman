@@ -33,3 +33,4 @@
       glob: true
       create: true
     ~/.config/jj: config/jj
+    ~/.config/mise: config/mise
