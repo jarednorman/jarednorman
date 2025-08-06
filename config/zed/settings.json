@@ -4,6 +4,7 @@
       "enabled": false,
     },
   },
+  "buffer_font_weight": 400.0,
   "buffer_line_height": "comfortable",
   "disable_ai": false,
   "features": {
