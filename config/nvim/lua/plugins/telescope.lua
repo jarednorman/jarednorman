@@ -12,7 +12,7 @@ return {
 
       telescope.setup {
         extensions = {
-          fzf = { fuzzy = false }
+          fzf = {}
         }
       }
 
