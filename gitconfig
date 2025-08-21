@@ -32,6 +32,8 @@
   nobranch = 9 bold
   unmerged = 9 bold
   untracked = 4
+[advice]
+  skippedCherryPicks = false
 [commit]
   verbose = true
 [core]
@@ -48,26 +50,40 @@
   date = relative
   decorate = short
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 [push]
-  default = current
+  autoSetupRemote = true
+  followTags = true
 [rebase]
-  autosquash = true
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
 [user]
   name = Jared Norman
   email = jared@super.gd
 [pull]
-	ff = only
-[advice]
-	skippedCherryPicks = false
+  ff = only
 [alias]
   l = "log --graph --format='%C(8)%h %C(reset)%C(11)→ %C(reset)%s%C(reset) %C(2)%aN %C(8)%cd%C(3)%d'"
-	sw = "!f(){ git switch $(git branch -l --sort=-committerdate --format=\"%(refname:short)\" --no-merged main | head -n 64 | fzf --preview \"git show --color=always {}\"); };f"
+  sw = "!f(){ git switch $(git branch -l --sort=-committerdate --format=\"%(refname:short)\" --no-merged main | head -n 64 | fzf --preview \"git show --color=always {}\"); };f"
   wip = "commit -nam WIP"
   unwip = "reset HEAD~1"
 [diff]
-	algorithm = histogram
+  algorithm = histogram
+  colorMoved = plain
+  renames = true
 [gpg]
-	program = /opt/homebrew/bin/gpg
+  program = /opt/homebrew/bin/gpg
 [branch]
-	sort = -committerdate
+  sort = -committerdate
+[column]
+  ui = auto
+[tag]
+  sort = version:refname
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+[rerere]
+  enabled = true
+  autoupdate = true
