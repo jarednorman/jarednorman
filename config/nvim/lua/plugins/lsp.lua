@@ -15,12 +15,12 @@ return {
     -- Use autocmd to bind keybindings only when the LSP is attached.
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-      callback = function(ev)
+      callback = function(args)
         -- Enable completion with <c-x><c-o>
-        vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+        vim.bo[args.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
         -- Buffer mappings
-        local opts = { buffer = ev.buf }
+        local opts = { buffer = args.buf }
 
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
@@ -31,7 +31,12 @@ return {
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 
-        vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = args.buf,
+          callback = function()
+            vim.lsp.buf.format {async = false, id = args.data.client_id }
+          end,
+        })
       end
     })
   end
