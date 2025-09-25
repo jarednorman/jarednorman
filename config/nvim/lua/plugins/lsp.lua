@@ -4,12 +4,18 @@ return {
     local lspconfig = require('lspconfig')
     lspconfig.ts_ls.setup({})
     lspconfig.rescriptls.setup({})
-    lspconfig.cssls.setup({})
+    lspconfig.cssls.setup({
+      cmd = { "css-languageserver", "--stdio" }
+    })
 
     lspconfig.ruby_lsp.setup({
       init_options = {
         formatter = 'standard',
       },
+    })
+
+    vim.diagnostic.config({
+      virtual_lines = true,
     })
 
     -- Use autocmd to bind keybindings only when the LSP is attached.
@@ -34,7 +40,10 @@ return {
         vim.api.nvim_create_autocmd("BufWritePre", {
           buffer = args.buf,
           callback = function()
-            vim.lsp.buf.format {async = false, id = args.data.client_id }
+            local client = vim.lsp.get_client_by_id(args.data.client_id)
+            if client and client.server_capabilities.documentFormattingProvider then
+              vim.lsp.buf.format {async = false, id = args.data.client_id }
+            end
           end,
         })
       end
