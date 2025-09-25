@@ -1,18 +1,23 @@
 return {
   "neovim/nvim-lspconfig",
   config = function()
-    local lspconfig = require('lspconfig')
-    lspconfig.ts_ls.setup({})
-    lspconfig.rescriptls.setup({})
-    lspconfig.cssls.setup({
+    vim.lsp.config("ts_ls", {})
+    vim.lsp.enable("ts_ls")
+
+    vim.lsp.config("rescriptls", {})
+    vim.lsp.enable("rescriptls")
+
+    vim.lsp.config("cssls", {
       cmd = { "css-languageserver", "--stdio" }
     })
+    vim.lsp.enable("cssls")
 
-    lspconfig.ruby_lsp.setup({
+    vim.lsp.config("ruby_lsp", {
       init_options = {
         formatter = 'standard',
       },
     })
+    vim.lsp.enable("ruby_lsp")
 
     vim.diagnostic.config({
       virtual_lines = true,
