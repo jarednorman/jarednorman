@@ -1,24 +1,11 @@
 -- Test
 return {
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    opts = {
-      styles = {
-        bold = true,
-        italic = false,
-        transparency = false,
-      },
-      highlight_groups = {
-        WinSeparator = { fg = "overlay", bg = "base" },
-        StatusLine = { bg = "overlay", fg = "subtle" },
-        StatusLineNC = { bg = "overlay", fg = "muted" },
-        NonText = { fg = "muted" }
-      },
-    },
+    "dracula/vim",
+    name = "dracula",
     init = function()
       vim.cmd [[set background=dark]]
-      vim.cmd [[colorscheme rose-pine]]
+      vim.cmd [[colorscheme dracula]]
     end,
   }
 }
