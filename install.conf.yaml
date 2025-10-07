@@ -17,7 +17,6 @@
 - link:
     ~/.Brewfile: Brewfile
     ~/.bundle/config: bundler_config
-    ~/.config/kak: config/kak
     ~/.config/kitty: config/kitty
     ~/.config/nvim: config/nvim
     ~/.gitconfig: gitconfig

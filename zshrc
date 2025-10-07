@@ -7,7 +7,7 @@ setopt AUTOCD
 
 # We vim.
 bindkey -v
-export EDITOR=kak
+export EDITOR=nvim
 
 # Do GPG
 export GPG_TTY=$(tty)
