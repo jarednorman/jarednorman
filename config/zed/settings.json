@@ -1,4 +1,6 @@
 {
+  "buffer_line_height": "comfortable",
+  "disable_ai": false,
   "features": {
     "edit_prediction_provider": "copilot"
   },
@@ -14,10 +16,10 @@
     "diagnostics": false,
     "metrics": false
   },
-  "ui_font_size": 12,
+  "ui_font_size": 14.0,
   "ui_font_family": ".SystemUIFont",
-  "buffer_font_family": "MonoLisa",
-  "buffer_font_size": 12,
+  "buffer_font_family": "Hack",
+  "buffer_font_size": 14.0,
   "buffer_font_features": {
     "calt": false,
     "liga": false
@@ -25,7 +27,7 @@
   "theme": {
     "mode": "system",
     "light": "Rosé Pine Dawn",
-    "dark": "Gruvbox Dark Hard"
+    "dark": "Rosé Pine"
   },
   "git": {
     "inline_blame": {
