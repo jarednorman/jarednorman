@@ -1,4 +1,4 @@
-- clean: ['~']
+- clean: ["~"]
 
 - defaults:
     link:
@@ -31,7 +31,6 @@
     ~/.zsh/vendor: zsh/vendor
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
-    ~/.ocamlinit: ocamlinit
     ~/.config/fish:
       path: config/fish/**
       glob: true
