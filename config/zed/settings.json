@@ -20,10 +20,6 @@
   "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "Fira Code",
   "buffer_font_size": 12.0,
-  "buffer_font_features": {
-    "calt": false,
-    "liga": false
-  },
   "theme": {
     "mode": "system",
     "light": "Rosé Pine Dawn",
