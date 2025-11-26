@@ -7,3 +7,14 @@ email = "jared@super.gd"
 [ui]
 default-command = "log"
 diff-editor = ":builtin"
+
+# Defaults: https://github.com/jj-vcs/jj/blob/main/cli/src/config/colors.toml
+[colors]
+"commit_id" = "blue"
+"change_id" = "green"
+"rest" = "#cecacd"
+"timestamp" = "magenta"
+
+"working_copy commit_id" = "blue"
+"working_copy change_id" = "green"
+"working_copy timestamp" = "magenta"
