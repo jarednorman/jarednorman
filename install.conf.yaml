@@ -32,3 +32,4 @@
       path: config/fish/**
       glob: true
       create: true
+    ~/.config/jj: config/jj

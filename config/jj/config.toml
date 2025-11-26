@@ -1,0 +1,9 @@
+#:schema https://jj-vcs.github.io/jj/latest/config-schema.json
+
+[user]
+name = "Jared Norman"
+email = "jared@super.gd"
+
+[ui]
+default-command = "log"
+diff-editor = ":builtin"
