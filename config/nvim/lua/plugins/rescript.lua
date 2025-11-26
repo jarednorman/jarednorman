@@ -1,3 +1,3 @@
 return {
-  "rescript-lang/vim-rescript"
+    "rescript-lang/vim-rescript"
 }
