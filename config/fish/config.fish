@@ -55,7 +55,7 @@ if status is-interactive
         # Format the pipestatus output with brackets and pipe separators
         set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
-        # Assemble and print the prompt: colored cwd, git status, exit status, colored suffix
-        echo -n -s (set_color $color_cwd) (prompt_pwd) $normal (fish_vcs_prompt) $normal " "$prompt_status (set_color $color_suffix) $suffix $normal " "
+        # Assemble and print the prompt: colored cwd, exit status, colored suffix
+        echo -n -s (set_color $color_cwd) (prompt_pwd) $normal " "$prompt_status (set_color $color_suffix) $suffix $normal " "
     end
 end
