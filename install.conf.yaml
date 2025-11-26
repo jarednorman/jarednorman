@@ -28,9 +28,6 @@
     ~/.inputrc: inputrc
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
-    ~/.zsh/vendor: zsh/vendor
-    ~/.zshenv: zshenv
-    ~/.zshrc: zshrc
     ~/.config/fish:
       path: config/fish/**
       glob: true
