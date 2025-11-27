@@ -26,6 +26,7 @@
     "dark": "Rosé Pine"
   },
   "git": {
+    "git_gutter": "hide",
     "inline_blame": {
       "enabled": false
     }
