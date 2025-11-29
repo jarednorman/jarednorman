@@ -1,4 +1,3 @@
-tap "charmbracelet/tap"
 tap "heroku/brew"
 brew "allure"
 brew "bat"
