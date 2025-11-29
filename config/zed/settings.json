@@ -25,11 +25,21 @@
     "light": "Rosé Pine Dawn",
     "dark": "Rosé Pine"
   },
+  "gutter": {
+    "folds": false
+  },
+  "indent_guides": {
+    "enabled": false
+  },
+  "inline_code_actions": false,
   "git": {
     "git_gutter": "hide",
     "inline_blame": {
       "enabled": false
     }
+  },
+  "scrollbar": {
+    "git_diff": false
   },
   "soft_wrap": "editor_width",
   "use_autoclose": false,
