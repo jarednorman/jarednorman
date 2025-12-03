@@ -6,8 +6,8 @@ hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "n", function()
     -- Get the usable frame (excludes menubar and dock)
     local frame = screen:frame()
 
-    local w = 1397
-    local h = 851
+    local w = 1464
+    local h = 894
 
     win:setFrame({
         x = frame.x + (frame.w - w) / 2,
