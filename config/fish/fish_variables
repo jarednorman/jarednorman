@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export FZF_DEFAULT_OPTS:\x0a\x2d\x2dcolor\x3dfg\x3a\x23908caa\x2cbg\x3a\x23191724\x2chl\x3a\x23ebbcba\x0a\x2d\x2dcolor\x3dfg\x2b\x3a\x23e0def4\x2cbg\x2b\x3a\x2326233a\x2chl\x2b\x3a\x23ebbcba\x0a\x2d\x2dcolor\x3dborder\x3a\x23403d52\x2cheader\x3a\x2331748f\x2cgutter\x3a\x23191724\x0a\x2d\x2dcolor\x3dspinner\x3a\x23f6c177\x2cinfo\x3a\x239ccfd8\x0a\x2d\x2dcolor\x3dpointer\x3a\x23c4a7e7\x2cmarker\x3a\x23eb6f92\x2cprompt\x3a\x23908caa
++SETUVAR --export OBJC_DISABLE_INITIALIZE_FORK_SAFETY:yes
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
