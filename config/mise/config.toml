@@ -1,3 +1,8 @@
 [tools]
 node = "latest"
 ruby = "latest"
+
+[settings]
+
+[settings.ruby]
+ruby_build_opts = "--enable-shared --with-openssl-dir=/opt/homebrew/opt/openssl@3.5"
