@@ -35,3 +35,6 @@ diff-editor = ":builtin"
 
 "empty" = "magenta"
 "working_copy empty" = "magenta"
+
+[aliases]
+bm = ["bookmark"]
