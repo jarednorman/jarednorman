@@ -40,7 +40,6 @@
   },
   "buffer_font_weight": 400.0,
   "buffer_line_height": "comfortable",
-  "disable_ai": false,
   "show_edit_predictions": true,
   "wrap_guides": [80, 100],
   "edit_predictions": {
@@ -48,6 +47,7 @@
     "disabled_globs": [".env"],
   },
   "agent": {
+    "button": true,
     "enabled": false,
   },
   "telemetry": {
@@ -98,10 +98,6 @@
     "CSS": {
       "tab_size": 2,
     },
-    "ReScript": {
-      "formatter": "language_server",
-      "format_on_save": "on",
-    },
     "ERB": {
       "tab_size": 2,
     },
@@ -124,13 +120,6 @@
           "onTypeFormatting": false,
         },
         "formatter": "standard",
-      },
-    },
-    "rescript-language-server": {
-      "initialization_options": {
-        "extensionConfiguration": {
-          "askToStartBuild": false,
-        },
       },
     },
   },
