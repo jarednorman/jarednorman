@@ -29,6 +29,9 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 printf "%s\n" "System - Disable smart dashes (not useful when writing code)."
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
+printf "%s\n" "System - Disable images in menu bar actions."
+defaults write -g NSMenuEnableActionImages -bool NO
+
 printf "%s\n" "System - Require password immediately after sleep or screen saver begins."
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
