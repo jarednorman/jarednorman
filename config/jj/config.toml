@@ -38,3 +38,6 @@ diff-editor = ":builtin"
 
 [aliases]
 bm = ["bookmark"]
+
+[git]
+private-commits = '''description('private:*')'''
