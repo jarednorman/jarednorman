@@ -12,12 +12,12 @@ This repo is managed with Jujutsu. Use `jj` commands. Do not use `git` commands 
 
 - Default command is `log`, so bare `jj` shows the log
 - `bm` is an alias for `bookmark` (e.g. `jj bm create foo`)
-- Private commits: any commit whose description starts with `private:` is excluded from pushes
+- Private revisions: any revision whose description starts with `private:` is excluded from pushes
 - Interactive diff editor is builtin (no external editor needed)
 
 ## Working copy
 
-The working directory is always a commit, referenced as `@`. There is no staging area. Changes are snapshotted automatically on every `jj` command.
+The working directory is always a revision, referenced as `@`. There is no staging area. Changes are snapshotted automatically on every `jj` command.
 
 There is no need to run `jj commit`.
 
@@ -38,25 +38,25 @@ After any mutation (`squash`, `abandon`, `rebase`, `restore`), verify with `jj s
 
 ### Squash workflow
 
-For non-trivial work, use the squash workflow. It gives you a scratch space (`@`) separate from the "real" commit, similar to git's staging area:
+For non-trivial work, use the squash workflow. It gives you a scratch space (`@`) separate from the "real" revision, similar to git's staging area:
 
 1. Run `jj st`. If `@` already has changes, run `jj new` first.
-2. Describe the target commit: `jj desc -m "Add foo feature"`
+2. Describe the target revision: `jj desc -m "Add foo feature"`
 3. Create a scratch space on top: `jj new`
-4. Make changes in `@` (the scratch commit).
+4. Make changes in `@` (the scratch revision).
 5. Move finished work into the described parent: `jj squash`
    - To move only specific files: `jj squash <path>`
 6. Repeat steps 4-5 until the feature is complete.
 7. Do not run `jj new` when done — leave that for the start of the next task.
 
-Review the contents of the parent commit with `jj show @-`. Review the current "scratch area" changes with `jj show @` or `jj st`. You can update the message for the parent commit with `jj describe @- -m "<message>"`.
+Review the contents of the parent revision with `jj show @-`. Review the current "scratch area" changes with `jj show @` or `jj st`. You can update the description of the parent revision with `jj describe @- -m "<message>"`.
 
 ### Alternative: edit in place
 
-For simple, single-step changes it is fine to skip the scratch commit:
+For simple, single-step changes it is fine to skip the scratch revision:
 
 1. Run `jj st`. If `@` already has changes, run `jj new` first.
-2. Describe the commit: `jj desc -m "Fix typo in README"`
+2. Describe the revision: `jj desc -m "Fix typo in README"`
 3. Make changes directly in `@`.
 4. Do not run `jj new` when done — leave that for the start of the next task.
 
@@ -67,20 +67,20 @@ For simple, single-step changes it is fine to skip the scratch commit:
 | Status | `jj st` |
 | Log | `jj log` |
 | Diff | `jj diff` |
-| Describe commit | `jj desc -m "message"` |
-| New commit | `jj new` |
-| Edit a commit | `jj edit <change-id>` |
-| Show a commit | `jj show <change-id>` |
+| Describe revision | `jj desc -m "message"` |
+| New revision | `jj new` |
+| Edit a revision | `jj edit <change-id>` |
+| Show a revision | `jj show <change-id>` |
 | Squash into parent | `jj squash` |
 | Auto-distribute changes | `jj absorb` |
-| Abandon a commit | `jj abandon <change-id>` |
+| Abandon a revision | `jj abandon <change-id>` |
 | Undo last operation | `jj undo` |
 | Restore files | `jj restore [path]` |
 | Create bookmark | `jj bm create <name>` |
 | Move bookmark | `jj bm move <name> --to <change-id>` |
 | Push bookmark | `jj git push -b <name>` |
 
-## Commit messages
+## Descriptions
 
 Use an imperative verb phrase in sentence case, no trailing period:
 
@@ -88,7 +88,7 @@ Use an imperative verb phrase in sentence case, no trailing period:
 - "Fix null pointer in payment processor"
 - "Remove deprecated API endpoints"
 
-Use `private: ` prefix for commits that should never be pushed:
+Use `private: ` prefix for revisions that should never be pushed:
 
 - `private: WIP notes`
 - `private: Local debug logging`
@@ -99,18 +99,18 @@ Use `private: ` prefix for commits that should never be pushed:
 
 - Move all changes into parent: `jj squash`
 - Move specific files only: `jj squash <path>`
-- Squash into an arbitrary commit: `jj squash --into <change-id>`
-- Move between two arbitrary commits: `jj squash --from <source> --into <dest>`
+- Squash into an arbitrary revision: `jj squash --into <change-id>`
+- Move between two arbitrary revisions: `jj squash --from <source> --into <dest>`
 
 Always pass `-m "message"` if squashing would leave the parent with no description, to avoid opening an editor.
 
 ## Identifiers
 
-Prefer **change IDs** over commit IDs — they stay stable when a commit is rewritten. Commit IDs (content hashes) change on every rewrite.
+Prefer **change IDs** over revision IDs — change IDs stay stable when a revision is rewritten. Revision IDs are content hashes (corresponding to git commit hashes) and change on every rewrite.
 
 ## Bookmarks
 
-Bookmarks are jj's equivalent of git branches. They do not auto-advance when you create new commits — you must move them manually before pushing:
+Bookmarks are jj's equivalent of git branches. They do not auto-advance when you create new revisions — you must move them manually before pushing:
 
 ```bash
 jj bm move my-feature --to @
@@ -119,4 +119,4 @@ jj git push -b my-feature
 
 ## Conflicts
 
-jj allows committing conflicts. To resolve: edit the conflicted files directly to remove conflict markers, then run `jj st` to confirm resolution. Do not use `jj resolve` (interactive).
+jj allows conflicts in revisions. To resolve: edit the conflicted files directly to remove conflict markers, then run `jj st` to confirm resolution. Do not use `jj resolve` (interactive).
