@@ -36,9 +36,28 @@ After any mutation (`squash`, `abandon`, `rebase`, `restore`), verify with `jj s
 
 ## Workflow
 
-1. Before starting work, run `jj st`. If `@` already has changes, run `jj new` first. If `@` is empty, describe it and use it as-is.
-2. Describe your intent: `jj desc -m "Verb object"`
-3. Make changes.
+### Squash workflow
+
+For non-trivial work, use the squash workflow. It gives you a scratch space (`@`) separate from the "real" commit, similar to git's staging area:
+
+1. Run `jj st`. If `@` already has changes, run `jj new` first.
+2. Describe the target commit: `jj desc -m "Add foo feature"`
+3. Create a scratch space on top: `jj new`
+4. Make changes in `@` (the scratch commit).
+5. Move finished work into the described parent: `jj squash`
+   - To move only specific files: `jj squash <path>`
+6. Repeat steps 4-5 until the feature is complete.
+7. Do not run `jj new` when done — leave that for the start of the next task.
+
+Review the contents of the parent commit with `jj show @-`. Review the current "scratch area" changes with `jj show @` or `jj st`. You can update the message for the parent commit with `jj describe @- -m "<message>"`.
+
+### Alternative: edit in place
+
+For simple, single-step changes it is fine to skip the scratch commit:
+
+1. Run `jj st`. If `@` already has changes, run `jj new` first.
+2. Describe the commit: `jj desc -m "Fix typo in README"`
+3. Make changes directly in `@`.
 4. Do not run `jj new` when done — leave that for the start of the next task.
 
 ## Common commands
@@ -76,7 +95,14 @@ Use `private: ` prefix for commits that should never be pushed:
 
 ## Squashing
 
-Use `jj squash` to move changes from the current working copy into the previous revision. Use `jj squash --into <change-id>` to squash changes into an arbitrary revision. Use `jj squash --from <source-change-id> --into <destination-change-id>` to squash an arbitrary revision into another arbitrary revision.
+`jj squash` moves changes from `@` into its parent — this is the core mechanic of the squash workflow above.
+
+- Move all changes into parent: `jj squash`
+- Move specific files only: `jj squash <path>`
+- Squash into an arbitrary commit: `jj squash --into <change-id>`
+- Move between two arbitrary commits: `jj squash --from <source> --into <dest>`
+
+Always pass `-m "message"` if squashing would leave the parent with no description, to avoid opening an editor.
 
 ## Identifiers
 
