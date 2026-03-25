@@ -1,19 +1,19 @@
 ---
 name: jujutsu
-description: Use when working with version control in any repo. If .jj/ exists, this is a Jujutsu repo — use jj commands, not git.
+description: Use when working with version control in any repo. If .jj/ exists, this is a Jujutsu repo. Use jj commands, not git.
 allowed-tools: Bash(jj *)
 ---
 
 # Jujutsu (jj)
 
-This repo is managed with Jujutsu. Use `jj` commands. Do not use `git` commands for VCS operations — they can corrupt jj state.
+This repo is managed with Jujutsu. Use `jj` commands. Do not use `git` commands for VCS operations; they can corrupt jj state.
 
 ## Key facts about this setup
 
 - Default command is `log`, so bare `jj` shows the log
 - `bm` is an alias for `bookmark` (e.g. `jj bm create foo`)
 - Private commits: any commit whose description starts with `private:` is excluded from pushes
-- Diff editor is builtin (no external editor needed)
+- Interactive diff editor is builtin (no external editor needed)
 
 ## Working copy
 
@@ -73,6 +73,10 @@ Use `private: ` prefix for commits that should never be pushed:
 
 - `private: WIP notes`
 - `private: Local debug logging`
+
+## Squashing
+
+Use `jj squash` to move changes from the current working copy into the previous revision. Use `jj squash --into <change-id>` to squash changes into an arbitrary revision. Use `jj squash --from <source-change-id> --into <destination-change-id>` to squash an arbitrary revision into another arbitrary revision.
 
 ## Identifiers
 
