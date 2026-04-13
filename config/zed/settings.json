@@ -1,37 +1,38 @@
 {
   "project_panel": {
+    "dock": "left",
     "hide_root": true,
     "indent_guides": {
-      "show": "never"
+      "show": "never",
     },
     "scrollbar": {
-      "show": "never"
+      "show": "never",
     },
     "bold_folder_labels": false,
     "starts_open": false,
     "indent_size": 20.0,
     "git_status": true,
     "folder_icons": true,
-    "file_icons": true
+    "file_icons": true,
   },
   "outline_panel": {
-    "button": false
+    "dock": "left",
+    "button": false,
   },
   "git_panel": {
-    "button": false
-  },
-  "notification_panel": {
-    "button": false
+    "dock": "left",
+    "button": false,
   },
   "collaboration_panel": {
-    "button": false
+    "dock": "left",
+    "button": false,
   },
   "terminal": {
     "font_size": 12.0,
     "dock": "right",
     "scrollbar": {
-      "show": "never"
-    }
+      "show": "never",
+    },
   },
   "diagnostics": {
     "inline": {
@@ -47,6 +48,7 @@
     "disabled_globs": [".env"],
   },
   "agent": {
+    "dock": "right",
     "button": true,
     "enabled": false,
   },
@@ -84,10 +86,10 @@
   "languages": {
     "Markdown": {
       "soft_wrap": "bounded",
-      "tab_size": 4
+      "tab_size": 4,
     },
     "Astro": {
-      "tab_size": 2
+      "tab_size": 2,
     },
     "Ruby": {
       "tab_size": 2,
