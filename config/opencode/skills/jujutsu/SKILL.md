@@ -66,11 +66,11 @@ For simple, single-step changes it is fine to skip the scratch revision:
 |--------|---------|
 | Status | `jj st` |
 | Log | `jj log` |
-| Diff | `jj diff` |
+| Diff* | `jj diff --git` |
 | Describe revision | `jj desc -m "message"` |
 | New revision | `jj new` |
 | Edit a revision | `jj edit <change-id>` |
-| Show a revision | `jj show <change-id>` |
+| Show a revision* | `jj show <change-id> --git` |
 | Squash into parent | `jj squash` |
 | Auto-distribute changes | `jj absorb` |
 | Abandon a revision | `jj abandon <change-id>` |
@@ -79,6 +79,8 @@ For simple, single-step changes it is fine to skip the scratch revision:
 | Create bookmark | `jj bm create <name>` |
 | Move bookmark | `jj bm move <name> --to <change-id>` |
 | Push bookmark | `jj git push -b <name>` |
+
+* Make sure to use `--git` with commands that show diffs, as agents have difficulty reading Jujutsu's default diff format.
 
 ## Descriptions
 

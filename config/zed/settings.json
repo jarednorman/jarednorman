@@ -57,10 +57,10 @@
     "diagnostics": false,
     "metrics": false,
   },
-  "ui_font_size": 14.0,
+  "ui_font_size": 12.0,
   "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "Fira Code",
-  "buffer_font_size": 14.0,
+  "buffer_font_size": 12.0,
   "theme": {
     "mode": "light",
     "light": "Rosé Pine Dawn",
