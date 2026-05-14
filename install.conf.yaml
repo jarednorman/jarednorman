@@ -10,6 +10,7 @@
 
 - create:
     - ~/.bundle
+    - ~/.claude
     - ~/.config
     - ~/.config/opencode
     - ~/.hammerspoon
@@ -37,4 +38,4 @@
     ~/.config/jj: config/jj
     ~/.config/mise: config/mise
     ~/.config/opencode/opencode.json: config/opencode/opencode.json
-    ~/.config/opencode/skills: config/opencode/skills
+    ~/.claude/skills: config/claude/skills
