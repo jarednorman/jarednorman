@@ -23,6 +23,9 @@
   "git_panel": {
     "dock": "left",
     "button": false,
+   },
+  "notification_panel": {
+    "button": false,
   },
   "collaboration_panel": {
     "dock": "left",
@@ -60,7 +63,7 @@
   "ui_font_size": 12.0,
   "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "Fira Code",
-  "buffer_font_size": 12.0,
+  "buffer_font_size": 13.0,
   "theme": {
     "mode": "light",
     "light": "Rosé Pine Dawn",
@@ -74,6 +77,10 @@
   },
   "inline_code_actions": false,
   "git": {
+    "branch_picker": {
+      "show_author_name": true,
+    },
+    "disable_git": true,
     "git_gutter": "hide",
     "inline_blame": {
       "enabled": false,
@@ -85,6 +92,13 @@
   "soft_wrap": "editor_width",
   "use_autoclose": false,
   "languages": {
+    "Lua": {
+      "auto_indent": "syntax_aware",
+      "show_edit_predictions": true,
+      "tab_size": 2,
+      "formatter": "none",
+      "language_servers": [],
+    },
     "Markdown": {
       "soft_wrap": "bounded",
       "tab_size": 4,
