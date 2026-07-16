@@ -38,6 +38,9 @@
     "scrollbar": {
       "show": "never",
     },
+    "env": {
+      "COLORTERM": "truecolor",
+    },
   },
   "diagnostics": {
     "inline": {
@@ -70,6 +73,12 @@
     "mode": "light",
     "light": "Rosé Pine Dawn",
     "dark": "Rosé Pine",
+  },
+  "theme_overrides": {
+    "Rosé Pine Dawn": {
+      "terminal.ansi.black": "#f2e9e1",
+      "terminal.ansi.bright_black": "#9893a5",
+    },
   },
   "gutter": {
     "folds": false,

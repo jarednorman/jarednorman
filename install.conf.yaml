@@ -39,3 +39,5 @@
     ~/.config/mise: config/mise
     ~/.config/opencode/opencode.json: config/opencode/opencode.json
     ~/.claude/skills: config/claude/skills
+    ~/.claude/themes: config/claude/themes
+    ~/.claude/settings.json: config/claude/settings.json

@@ -1,0 +1,15 @@
+{
+  "model": "claude-fable-5",
+  "enabledPlugins": {
+    "ruby-lsp@claude-plugins-official": true,
+    "figma@claude-plugins-official": true
+  },
+  "syntaxHighlightingDisabled": true,
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "theme": "custom:rose-pine-dawn",
+  "preferredNotifChannel": "kitty",
+  "remoteControlAtStartup": false,
+  "agentPushNotifEnabled": true
+}
