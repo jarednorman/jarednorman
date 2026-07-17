@@ -2,6 +2,8 @@
 air = "latest"
 node = "latest"
 ruby = "latest"
+zig = "latest"
+zls = "latest"
 
 [settings]
 

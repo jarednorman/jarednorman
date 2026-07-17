@@ -38,3 +38,5 @@ vendor/bundle
 .envrc
 *.code-workspace
 .zed/**/*
+
+**/.claude/settings.local.json
