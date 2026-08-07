@@ -37,6 +37,5 @@ vendor/bundle
 .projections.json
 .envrc
 *.code-workspace
-.zed/**/*
 
 **/.claude/settings.local.json
