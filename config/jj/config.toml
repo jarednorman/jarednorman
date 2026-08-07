@@ -10,7 +10,7 @@ diff-editor = ":builtin"
 
 # Defaults: https://github.com/jj-vcs/jj/blob/main/cli/src/config/colors.toml
 [colors]
-"rest" = "#524f67"
+"rest" = "#5a524c"
 
 "commit_id" = "blue"
 "working_copy commit_id" = "blue"
@@ -18,11 +18,11 @@ diff-editor = ":builtin"
 "change_id" = "green"
 "working_copy change_id" = "green"
 
-"author" = "#908caa"
-"working_copy author" = "#908caa"
+"author" = "#a89984"
+"working_copy author" = "#a89984"
 
-"timestamp" = "#6e6a86"
-"working_copy timestamp" = "#908caa"
+"timestamp" = "#928374"
+"working_copy timestamp" = "#a89984"
 
 "bookmarks" = "yellow"
 "working_copy bookmarks" = "yellow"
@@ -30,8 +30,8 @@ diff-editor = ":builtin"
 "description placeholder" = "magenta"
 "working_copy description placeholder" = "magenta"
 
-"empty description placeholder" = "#6e6a86"
-"working_copy empty description placeholder" = "#6e6a86"
+"empty description placeholder" = "#928374"
+"working_copy empty description placeholder" = "#928374"
 
 "empty" = "magenta"
 "working_copy empty" = "magenta"

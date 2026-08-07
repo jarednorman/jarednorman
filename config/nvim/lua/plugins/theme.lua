@@ -1,24 +1,28 @@
--- Test
 return {
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        opts = {
-            styles = {
-                bold = true,
-                italic = false,
-                transparency = false,
-            },
-            highlight_groups = {
-                WinSeparator = { fg = "overlay", bg = "base" },
-                StatusLine = { bg = "overlay", fg = "subtle" },
-                StatusLineNC = { bg = "overlay", fg = "muted" },
-                NonText = { fg = "muted" }
-            },
-        },
+        "sainnhe/gruvbox-material",
+        lazy = false,
+        priority = 1000,
         init = function()
-            vim.cmd [[set background=dark]]
-            vim.cmd [[colorscheme rose-pine]]
+            vim.g.gruvbox_material_background = "medium"
+            vim.g.gruvbox_material_foreground = "material"
+            vim.g.gruvbox_material_enable_bold = 1
+            vim.g.gruvbox_material_enable_italic = 0
+            vim.g.gruvbox_material_disable_italic_comment = 1
+        end,
+        config = function()
+            vim.api.nvim_create_autocmd("ColorScheme", {
+                pattern = "gruvbox-material",
+                group = vim.api.nvim_create_augroup("GruvboxMaterialOverrides", { clear = true }),
+                callback = function()
+                    vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#45403d", bg = "#282828" })
+                    vim.api.nvim_set_hl(0, "StatusLine", { bg = "#32302f", fg = "#a89984" })
+                    vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#32302f", fg = "#928374" })
+                    vim.api.nvim_set_hl(0, "NonText", { fg = "#928374" })
+                end,
+            })
+            vim.o.background = "dark"
+            vim.cmd.colorscheme("gruvbox-material")
         end,
     }
 }
