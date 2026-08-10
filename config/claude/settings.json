@@ -1,5 +1,5 @@
 {
-  "model": "claude-fable-5",
+  "model": "claude-fable-5[1m]",
   "enabledPlugins": {
     "ruby-lsp@claude-plugins-official": true,
     "figma@claude-plugins-official": true
