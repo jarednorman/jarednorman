@@ -36,10 +36,10 @@ diff-editor = ":builtin"
 "empty" = "magenta"
 "working_copy empty" = "magenta"
 
-# Word-level diff highlights: background tint instead of the default underline
+# Word-level diff highlights: bold instead of the default underline
 "diff token" = { underline = false }
-"diff removed token" = { bg = "#f7d9b9" }
-"diff added token" = { bg = "#dfe1b4" }
+"diff removed token" = { bold = true }
+"diff added token" = { bold = true }
 
 [aliases]
 bm = ["bookmark"]
