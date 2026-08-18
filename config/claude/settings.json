@@ -8,7 +8,7 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "tui": "fullscreen",
-  "theme": "custom:edge",
+  "theme": "custom:gruvbox-material",
   "preferredNotifChannel": "kitty",
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true
