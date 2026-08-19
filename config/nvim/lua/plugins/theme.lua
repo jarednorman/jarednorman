@@ -4,7 +4,7 @@ return {
         lazy = false,
         priority = 1000,
         init = function()
-            vim.g.gruvbox_material_background = "soft"
+            vim.g.gruvbox_material_background = "hard"
             vim.g.gruvbox_material_foreground = "material"
             vim.g.gruvbox_material_enable_bold = 1
             vim.g.gruvbox_material_enable_italic = 0
@@ -15,13 +15,13 @@ return {
                 pattern = "gruvbox-material",
                 group = vim.api.nvim_create_augroup("GruvboxMaterialOverrides", { clear = true }),
                 callback = function()
-                    vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#d5c4a1", bg = "#f2e5bc" })
-                    vim.api.nvim_set_hl(0, "StatusLine", { bg = "#ebdbb2", fg = "#7c6f64" })
-                    vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#ebdbb2", fg = "#928374" })
-                    vim.api.nvim_set_hl(0, "NonText", { fg = "#a89984" })
+                    vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#3c3836", bg = "#1d2021" })
+                    vim.api.nvim_set_hl(0, "StatusLine", { bg = "#282828", fg = "#a89984" })
+                    vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#282828", fg = "#928374" })
+                    vim.api.nvim_set_hl(0, "NonText", { fg = "#928374" })
                 end,
             })
-            vim.o.background = "light"
+            vim.o.background = "dark"
             vim.cmd.colorscheme("gruvbox-material")
         end,
     }

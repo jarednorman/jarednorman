@@ -2,13 +2,13 @@ if status is-interactive
     fzf --fish | source
 end
 
-# fzf colors: Gruvbox Material light soft
+# fzf colors: Gruvbox Material dark hard
 set -gx FZF_DEFAULT_OPTS "\
---color=fg:#7c6f64,bg:#f2e5bc,hl:#b47109 \
---color=fg+:#654735,bg+:#ebdbb2,hl+:#b47109 \
---color=border:#d5c4a1,header:#45707a,gutter:#f2e5bc \
---color=spinner:#b47109,info:#4c7a5d \
---color=pointer:#945e80,marker:#c14a4a,prompt:#7c6f64"
+--color=fg:#a89984,bg:#1d2021,hl:#d8a657 \
+--color=fg+:#d4be98,bg+:#282828,hl+:#d8a657 \
+--color=border:#3c3836,header:#7daea3,gutter:#1d2021 \
+--color=spinner:#d8a657,info:#89b482 \
+--color=pointer:#d3869b,marker:#ea6962,prompt:#a89984"
 
 # Claude Code clamps to 256 colors inside tmux unless this is set
 # https://github.com/anthropics/claude-code/issues/60788
