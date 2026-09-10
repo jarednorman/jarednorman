@@ -1,6 +1,7 @@
 [tools]
 air = "latest"
 node = "latest"
+"npm:@rescript/language-server" = "latest"
 ruby = "latest"
 zig = "latest"
 zls = "latest"

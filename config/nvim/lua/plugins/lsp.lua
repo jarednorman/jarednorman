@@ -8,6 +8,17 @@ return {
     })
     vim.lsp.enable("ruby_lsp")
 
+    vim.lsp.config("rescriptls", {
+      capabilities = {
+        workspace = {
+          didChangeWatchedFiles = {
+            dynamicRegistration = true,
+          },
+        },
+      },
+    })
+    vim.lsp.enable("rescriptls")
+
     vim.diagnostic.config({
       virtual_lines = true,
     })
