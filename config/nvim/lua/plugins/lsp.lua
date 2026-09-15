@@ -16,6 +16,16 @@ return {
           },
         },
       },
+      init_options = {
+        extensionConfiguration = {
+          -- Incremental typechecking silently fails on ReScript >= 12.3
+          -- (server doesn't recognize rewatch's lib/watch.lock), and while
+          -- enabled it also suppresses .compiler.log diagnostics. Disable it
+          -- so diagnostics come from the build; run `rescript watch` for
+          -- feedback on save.
+          incrementalTypechecking = { enable = false },
+        },
+      },
     })
     vim.lsp.enable("rescriptls")
 

@@ -8,6 +8,7 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "tui": "fullscreen",
+  "autoMemoryEnabled": false,
   "theme": "custom:gruvbox-material",
   "preferredNotifChannel": "kitty",
   "remoteControlAtStartup": false,
