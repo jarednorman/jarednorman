@@ -9,7 +9,7 @@
   "effortLevel": "high",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
-  "theme": "custom:gruvbox-material",
+  "theme": "custom:nightfox",
   "preferredNotifChannel": "kitty",
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true
