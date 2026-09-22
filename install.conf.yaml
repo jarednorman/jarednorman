@@ -36,6 +36,7 @@
       create: true
     ~/.config/jj: config/jj
     ~/.config/mise: config/mise
+    ~/.config/xremap/config.yml: xremap.yml
     ~/.config/opencode/opencode.json: config/opencode/opencode.json
     ~/.claude/skills: config/claude/skills
     ~/.claude/themes: config/claude/themes
