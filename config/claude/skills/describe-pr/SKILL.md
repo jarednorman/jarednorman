@@ -11,4 +11,4 @@ Create a PR description that focuses on the high-level structure of the PR and a
 
 Ensure the result is succinct and free from AI tells like em-dashes and flowery language.
 
-Format the PR description using GitHub-flavoured Markdown.
+Format the PR description using GitHub-flavoured Markdown. Do not wrap lines.
