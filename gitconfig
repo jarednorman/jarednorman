@@ -87,3 +87,5 @@
 [rerere]
   enabled = true
   autoupdate = true
+[credential "https://git.heroku.com"]
+	helper = !heroku git:credentials
