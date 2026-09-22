@@ -1,0 +1,25 @@
+# Font
+font-family = MonoLisa
+font-size = 10
+
+# Window
+window-padding-x = 4
+window-padding-y = 4
+window-padding-balance = true
+window-decoration = none
+maximize = true
+confirm-close-surface = false
+macos-non-native-fullscreen = true
+
+# Cursor
+cursor-style = block
+shell-integration-features = no-cursor
+
+# Behaviour
+copy-on-select = clipboard
+
+# Colors
+theme = Nightfox
+
+# Keybindings
+keybind = shift+enter=text:\x1b\r
