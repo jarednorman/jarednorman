@@ -4,4 +4,4 @@ SETUVAR --export EDITOR:nvim
 SETUVAR --export OBJC_DISABLE_INITIALIZE_FORK_SAFETY:yes
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:\x1d
-SETUVAR fish_user_paths:/Users/jardo/\x2elocal/bin\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/home/jardo/\x2elocal/bin\x1e/Users/jardo/\x2elocal/bin\x1e/opt/homebrew/bin
