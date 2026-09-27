@@ -1,3 +1,12 @@
+# Homebrew's mise auto-activates via vendor_conf.d; other installs don't
+if not functions -q __mise_env_eval
+    if status is-interactive
+        mise activate fish | source
+    else
+        mise activate fish --shims | source
+    end
+end
+
 if status is-interactive
     fzf --fish | source
 end
