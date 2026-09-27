@@ -21,6 +21,7 @@
     ~/.bundle/config: bundler_config
     ~/.config/ghostty: config/ghostty
     ~/.config/nvim: config/nvim
+    ~/.default-gems: default-gems
     ~/.gitconfig: gitconfig
     ~/.gitignore.global: gitignore.global
     ~/.hammerspoon/Spoons: hammerspoon/Spoons
