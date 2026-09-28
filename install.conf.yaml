@@ -14,7 +14,6 @@
     - ~/.config
     - ~/.config/opencode
     - ~/.hammerspoon
-    - ~/.zsh
 
 - link:
     ~/.Brewfile: Brewfile
