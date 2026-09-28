@@ -19,7 +19,7 @@
 - Install dotfiles
 
   ```
-  git clone git@github.com:jarednorman/jarednorman.git && cd jarednorman && ./install
+  git clone git@github.com:jarednorman/jarednorman.git ~/Codes/dotfiles && cd ~/Codes/dotfiles && ./install
   ```
 
 - Install packages we like
