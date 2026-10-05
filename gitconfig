@@ -12,12 +12,12 @@
 [color "diff"]
   commit = 3
   context = "#ff00ff" # what is?
-  frag = "#aeafb0 bold"
-  func = "#aeafb0 nobold"
-  meta = "#d67ad2"
-  new = "#81b29a"
-  old = "#c94f6d"
-  plain = "#738091"
+  frag = "#797593 bold"
+  func = "#797593 nobold"
+  meta = "#d7827e"
+  new = "#286983"
+  old = "#b4637a"
+  plain = "#9893a5"
   whitespace = 1 reverse
 [color "diff-highlight"]
   newHighlight = 2 bold

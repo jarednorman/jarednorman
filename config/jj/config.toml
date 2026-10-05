@@ -10,7 +10,7 @@ diff-editor = ":builtin"
 
 # Defaults: https://github.com/jj-vcs/jj/blob/main/cli/src/config/colors.toml
 [colors]
-"rest" = "#39506d"
+"rest" = "#cecacd"
 
 "commit_id" = "blue"
 "working_copy commit_id" = "blue"
@@ -18,11 +18,11 @@ diff-editor = ":builtin"
 "change_id" = "green"
 "working_copy change_id" = "green"
 
-"author" = "#aeafb0"
-"working_copy author" = "#aeafb0"
+"author" = "#797593"
+"working_copy author" = "#797593"
 
-"timestamp" = "#738091"
-"working_copy timestamp" = "#aeafb0"
+"timestamp" = "#9893a5"
+"working_copy timestamp" = "#797593"
 
 "bookmarks" = "yellow"
 "working_copy bookmarks" = "yellow"
@@ -30,16 +30,16 @@ diff-editor = ":builtin"
 "description placeholder" = "magenta"
 "working_copy description placeholder" = "magenta"
 
-"empty description placeholder" = "#738091"
-"working_copy empty description placeholder" = "#738091"
+"empty description placeholder" = "#9893a5"
+"working_copy empty description placeholder" = "#9893a5"
 
 "empty" = "magenta"
 "working_copy empty" = "magenta"
 
 # Word-level diff highlights: background tint instead of the default underline
 "diff token" = { underline = false }
-"diff removed token" = { bg = "#452e3f" }
-"diff added token" = { bg = "#2e4045" }
+"diff removed token" = { bg = "#ecd7d6" }
+"diff added token" = { bg = "#d0d8d8" }
 
 [aliases]
 bm = ["bookmark"]

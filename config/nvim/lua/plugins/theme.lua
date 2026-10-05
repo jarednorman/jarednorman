@@ -1,27 +1,25 @@
 return {
     {
-        "EdenEast/nightfox.nvim",
+        "rose-pine/neovim",
+        name = "rose-pine",
         lazy = false,
         priority = 1000,
         config = function()
-            require("nightfox").setup({
-                options = {
-                    styles = {
-                        comments = "NONE",
-                        keywords = "NONE",
-                        types = "NONE",
-                    },
+            require("rose-pine").setup({
+                variant = "dawn",
+                styles = {
+                    bold = true,
+                    italic = false,
                 },
-                groups = {
-                    all = {
-                        WinSeparator = { fg = "palette.bg3", bg = "palette.bg1" },
-                        StatusLine = { bg = "palette.bg2", fg = "palette.fg2" },
-                        StatusLineNC = { bg = "palette.bg2", fg = "palette.fg3" },
-                        NonText = { fg = "palette.comment" },
-                    },
+                highlight_groups = {
+                    WinSeparator = { fg = "highlight_med", bg = "base" },
+                    StatusLine = { bg = "overlay", fg = "subtle" },
+                    StatusLineNC = { bg = "overlay", fg = "muted" },
+                    NonText = { fg = "muted" },
                 },
             })
-            vim.cmd.colorscheme("nightfox")
+            vim.o.background = "light"
+            vim.cmd.colorscheme("rose-pine")
         end,
     }
 }

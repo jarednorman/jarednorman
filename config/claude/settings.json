@@ -8,7 +8,7 @@
   "effortLevel": "high",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
-  "theme": "custom:nightfox",
+  "theme": "custom:rose-pine-dawn",
   "preferredNotifChannel": "kitty",
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true
