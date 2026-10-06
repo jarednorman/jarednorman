@@ -11,5 +11,6 @@
   "theme": "custom:rose-pine-dawn",
   "preferredNotifChannel": "kitty",
   "remoteControlAtStartup": false,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "model": "claude-fable-5-1"
 }
