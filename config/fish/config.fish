@@ -11,41 +11,43 @@ if status is-interactive
     fzf --fish | source
 end
 
-# Rosé Pine Dawn: fish syntax/pager colours
-# https://github.com/rose-pine/fish
+# Catppuccin Mocha: fish syntax/pager colours
+# https://github.com/catppuccin/fish
 if status is-interactive
-    set -g fish_color_normal 575279
-    set -g fish_color_command 907aa9
-    set -g fish_color_keyword 56949f
-    set -g fish_color_quote ea9d34
-    set -g fish_color_redirection 286983
-    set -g fish_color_end 797593
-    set -g fish_color_error b4637a
-    set -g fish_color_param d7827e
-    set -g fish_color_comment 797593
-    set -g fish_color_selection --reverse
-    set -g fish_color_operator 575279
-    set -g fish_color_escape 286983
-    set -g fish_color_autosuggestion 797593
-    set -g fish_color_cancel 575279
-    set -g fish_color_search_match --background=f2e9e1
-    set -g fish_pager_color_progress d7827e
-    set -g fish_pager_color_prefix 56949f
-    set -g fish_pager_color_completion 797593
-    set -g fish_pager_color_description 797593
-    set -g fish_pager_color_selected_background --background=f2e9e1
-    set -g fish_pager_color_selected_prefix 56949f
-    set -g fish_pager_color_selected_completion 575279
-    set -g fish_pager_color_selected_description 575279
+    set -g fish_color_normal cdd6f4
+    set -g fish_color_command 89b4fa
+    set -g fish_color_keyword f38ba8
+    set -g fish_color_quote a6e3a1
+    set -g fish_color_redirection f5c2e7
+    set -g fish_color_end fab387
+    set -g fish_color_error f38ba8
+    set -g fish_color_param f2cdcd
+    set -g fish_color_comment 7f849c
+    set -g fish_color_selection --background=313244
+    set -g fish_color_operator f5c2e7
+    set -g fish_color_escape eba0ac
+    set -g fish_color_autosuggestion 6c7086
+    set -g fish_color_cancel f38ba8
+    set -g fish_color_search_match --background=313244
+    set -g fish_pager_color_progress 6c7086
+    set -g fish_pager_color_prefix f5c2e7
+    set -g fish_pager_color_completion cdd6f4
+    set -g fish_pager_color_description 6c7086
+    set -g fish_pager_color_selected_background --background=45475a
+    set -g fish_pager_color_selected_prefix f5c2e7
+    set -g fish_pager_color_selected_completion cdd6f4
+    set -g fish_pager_color_selected_description cdd6f4
 end
 
-# fzf colors: Rosé Pine Dawn
+# fzf colors: Catppuccin Mocha
+# https://github.com/catppuccin/fzf
 set -gx FZF_DEFAULT_OPTS "\
---color=fg:#797593,bg:#faf4ed,hl:#d7827e \
---color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e \
---color=border:#dfdad9,header:#286983,gutter:#faf4ed \
---color=spinner:#ea9d34,info:#56949f \
---color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+--color=fg:#cdd6f4,bg:#1e1e2e,hl:#f38ba8 \
+--color=fg+:#cdd6f4,bg+:#313244,hl+:#f38ba8 \
+--color=border:#6c7086,header:#f38ba8,gutter:#1e1e2e \
+--color=spinner:#f5e0dc,info:#cba6f7 \
+--color=pointer:#f5e0dc,marker:#b4befe,prompt:#cba6f7 \
+--color=selected-bg:#45475a,label:#cdd6f4"
 
 # Claude Code clamps to 256 colors inside tmux unless this is set
 # https://github.com/anthropics/claude-code/issues/60788

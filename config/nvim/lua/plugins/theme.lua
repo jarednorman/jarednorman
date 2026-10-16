@@ -1,25 +1,27 @@
 return {
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
+        "catppuccin/nvim",
+        name = "catppuccin",
         lazy = false,
         priority = 1000,
         config = function()
-            require("rose-pine").setup({
-                variant = "dawn",
+            require("catppuccin").setup({
+                flavour = "mocha",
                 styles = {
-                    bold = true,
-                    italic = false,
+                    comments = {},
+                    conditionals = {},
                 },
-                highlight_groups = {
-                    WinSeparator = { fg = "highlight_med", bg = "base" },
-                    StatusLine = { bg = "overlay", fg = "subtle" },
-                    StatusLineNC = { bg = "overlay", fg = "muted" },
-                    NonText = { fg = "muted" },
-                },
+                custom_highlights = function(colors)
+                    return {
+                        WinSeparator = { fg = colors.surface1, bg = colors.base },
+                        StatusLine = { bg = colors.surface0, fg = colors.subtext0 },
+                        StatusLineNC = { bg = colors.surface0, fg = colors.overlay0 },
+                        NonText = { fg = colors.overlay0 },
+                    }
+                end,
             })
-            vim.o.background = "light"
-            vim.cmd.colorscheme("rose-pine")
+            vim.o.background = "dark"
+            vim.cmd.colorscheme("catppuccin")
         end,
     }
 }
