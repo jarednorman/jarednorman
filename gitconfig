@@ -17,6 +17,8 @@
   meta = "#d7827e"
   new = "#286983"
   old = "#b4637a"
+  oldMoved = "#907aa9"
+  newMoved = "#56949f"
   plain = "#9893a5"
   whitespace = 1 reverse
 [color "diff-highlight"]
