@@ -19,7 +19,7 @@ shell-integration-features = no-cursor
 copy-on-select = clipboard
 
 # Colors
-theme = Catppuccin Mocha
+theme = gruvbox-material-dark-hard
 
 # Keybindings
 keybind = shift+enter=text:\x1b\r
