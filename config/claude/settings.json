@@ -8,7 +8,7 @@
   "effortLevel": "high",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
-  "theme": "custom:gruvbox-material",
+  "theme": "custom:catppuccin-latte",
   "preferredNotifChannel": "kitty",
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
