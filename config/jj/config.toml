@@ -46,3 +46,21 @@ bm = ["bookmark"]
 
 [git]
 private-commits = '''description('private:*')'''
+
+[templates]
+# Show the diff in the `jj describe` editor, like `git commit --verbose`.
+# Everything after `JJ: ignore-rest` is dropped from the final description,
+# and leaving the diff unprefixed lets editors syntax-highlight it.
+draft_commit_description = '''
+concat(
+  builtin_draft_commit_description,
+  "\nJJ: ignore-rest\n",
+  diff.git(),
+)
+'''
+
+# The editor is plain text, so don't emit OSC-8 hyperlink escapes there.
+[[--scope]]
+--when.commands = ["describe"]
+[--scope.template-aliases]
+"hyperlink(url, text)" = "text"
