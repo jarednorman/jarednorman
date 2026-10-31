@@ -12,8 +12,8 @@ function fish_prompt
     set -q fish_color_status
     or set -g fish_color_status red
 
-    # Current working directory color is always magenta
-    set -l color_cwd magenta
+    # Current working directory colour: Catppuccin Latte mauve
+    set -l color_cwd 8839ef
 
     # Default prompt suffix (arrow) and color for normal user (blue)
     set -l suffix ' ->'
@@ -49,10 +49,12 @@ function fish_prompt
     # Get color for status display (potentially bold, based on whether command was run)
     set -l statusb_color (set_color $bold_flag $fish_color_status)
 
-    # Format the pipestatus output with brackets and pipe separators
+    # Format the pipestatus output with brackets and pipe separators.
+    # Empty when the status was 0; otherwise prefixed with a space.
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
+    set prompt_status " "$prompt_status
 
-    # Format command duration if > 30 seconds
+    # Format command duration if > 30 seconds (Catppuccin Latte green)
     set -l prompt_duration ""
     if test "$CMD_DURATION" -gt 30000 2>/dev/null
         set -l total_secs (math --scale=0 $CMD_DURATION / 1000)
@@ -61,14 +63,23 @@ function fish_prompt
         set -l secs (math --scale=0 $total_secs % 60)
 
         if test $hours -gt 0
-            set prompt_duration (set_color yellow)"("$hours"h "$mins"m "$secs"s)"$normal" "
+            set prompt_duration " "(set_color 40a02b)"("$hours"h "$mins"m "$secs"s)"$normal
         else if test $mins -gt 0
-            set prompt_duration (set_color yellow)"("$mins"m "$secs"s)"$normal" "
+            set prompt_duration " "(set_color 40a02b)"("$mins"m "$secs"s)"$normal
         else
-            set prompt_duration (set_color yellow)"("$secs"s)"$normal" "
+            set prompt_duration " "(set_color 40a02b)"("$secs"s)"$normal
         end
     end
 
-    # Assemble and print the prompt: colored cwd, exit status, colored suffix
-    echo -n -s (set_color $color_cwd) (prompt_pwd) $normal " "$prompt_duration$prompt_status (set_color $color_suffix) $suffix $normal " "
+    # Background job indicator, e.g. "&2", shown only when jobs exist
+    # Colour: Catppuccin Latte peach
+    set -l prompt_jobs ""
+    set -l num_jobs (count (jobs -p))
+    if test $num_jobs -gt 0
+        set prompt_jobs " "(set_color fe640b)"&"$num_jobs$normal
+    end
+
+    # Assemble and print the prompt: colored cwd, duration, jobs, exit status, colored suffix.
+    # Each optional segment carries its own leading space and is empty when not applicable.
+    echo -n -s (set_color $color_cwd) (prompt_pwd) $normal $prompt_duration $prompt_jobs $prompt_status (set_color $color_suffix) $suffix $normal " "
 end
