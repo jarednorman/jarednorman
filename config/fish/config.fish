@@ -9,6 +9,11 @@ end
 
 if status is-interactive
     fzf --fish | source
+    # fish >= 4.3.3 syntax-highlights every history entry in the ctrl-r list,
+    # which drowns out fzf's match highlighting. Patch the widget to turn it off.
+    functions fzf-history-widget \
+        | string replace -- '"--color=always"' '"--color=never"' \
+        | source
 end
 
 # Catppuccin Latte: fish syntax/pager colours
