@@ -26,7 +26,8 @@ if status is-interactive
     set -g fish_color_redirection ea76cb
     set -g fish_color_end fe640b
     set -g fish_color_error d20f39
-    set -g fish_color_param dd7878
+    set -g fish_color_param 4c4f69 # text, not flamingo: arguments stay plain
+    set -g fish_color_option 7287fd # lavender: --flags subtly set apart
     set -g fish_color_comment 8c8fa1
     set -g fish_color_selection --background=ccd0da
     set -g fish_color_operator ea76cb
