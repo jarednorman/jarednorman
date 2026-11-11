@@ -9,4 +9,4 @@ zls = "latest"
 [settings]
 
 [settings.ruby]
-ruby_build_opts = "--enable-shared --with-openssl-dir=/opt/homebrew/opt/openssl@3.5"
+ruby_build_opts = "--enable-shared"
