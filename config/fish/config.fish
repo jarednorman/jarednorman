@@ -64,4 +64,6 @@ set -gx CLAUDE_CODE_TMUX_TRUECOLOR 1
 test -r '/Users/jardo/.opam/opam-init/init.fish' && source '/Users/jardo/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 
 # Podman API socket for Docker-compatible clients (docker-compose, DevPod)
-set -gx DOCKER_HOST unix:///run/user/1000/podman/podman.sock
+if test (uname) = Linux
+    set -gx DOCKER_HOST unix:///run/user/1000/podman/podman.sock
+end
