@@ -12,8 +12,8 @@ function fish_prompt
     set -q fish_color_status
     or set -g fish_color_status red
 
-    # Current working directory colour: Catppuccin Latte mauve
-    set -l color_cwd 8839ef
+    # Current working directory colour: Catppuccin Mocha mauve
+    set -l color_cwd cba6f7
 
     # Default prompt suffix (arrow) and color for normal user (blue)
     set -l suffix ' ->'
@@ -54,7 +54,7 @@ function fish_prompt
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
     set prompt_status " "$prompt_status
 
-    # Format command duration if > 30 seconds (Catppuccin Latte green)
+    # Format command duration if > 30 seconds (Catppuccin Mocha green)
     set -l prompt_duration ""
     if test "$CMD_DURATION" -gt 30000 2>/dev/null
         set -l total_secs (math --scale=0 $CMD_DURATION / 1000)
@@ -63,20 +63,20 @@ function fish_prompt
         set -l secs (math --scale=0 $total_secs % 60)
 
         if test $hours -gt 0
-            set prompt_duration " "(set_color 40a02b)"("$hours"h "$mins"m "$secs"s)"$normal
+            set prompt_duration " "(set_color a6e3a1)"("$hours"h "$mins"m "$secs"s)"$normal
         else if test $mins -gt 0
-            set prompt_duration " "(set_color 40a02b)"("$mins"m "$secs"s)"$normal
+            set prompt_duration " "(set_color a6e3a1)"("$mins"m "$secs"s)"$normal
         else
-            set prompt_duration " "(set_color 40a02b)"("$secs"s)"$normal
+            set prompt_duration " "(set_color a6e3a1)"("$secs"s)"$normal
         end
     end
 
     # Background job indicator, e.g. "&2", shown only when jobs exist
-    # Colour: Catppuccin Latte peach
+    # Colour: Catppuccin Mocha peach
     set -l prompt_jobs ""
     set -l num_jobs (count (jobs -p))
     if test $num_jobs -gt 0
-        set prompt_jobs " "(set_color fe640b)"&"$num_jobs$normal
+        set prompt_jobs " "(set_color fab387)"&"$num_jobs$normal
     end
 
     # Assemble and print the prompt: colored cwd, duration, jobs, exit status, colored suffix.
