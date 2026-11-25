@@ -67,3 +67,7 @@ test -r '/Users/jardo/.opam/opam-init/init.fish' && source '/Users/jardo/.opam/o
 if test (uname) = Linux
     set -gx DOCKER_HOST unix:///run/user/1000/podman/podman.sock
 end
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/jardo/.local/bin" $PATH
