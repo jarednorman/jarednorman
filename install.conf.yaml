@@ -1,4 +1,4 @@
-- clean: ["~"]
+- clean: ["~", "~/.claude/skills"]
 
 - defaults:
     link:
@@ -11,8 +11,10 @@
 - create:
     - ~/.bundle
     - ~/.claude
+    - ~/.claude/skills
     - ~/.config
     - ~/.config/opencode
+    - ~/.gemini/config
     - ~/.hammerspoon
 
 - link:
@@ -38,6 +40,10 @@
     ~/.config/mise: config/mise
     ~/.config/xremap/config.yml: xremap.yml
     ~/.config/opencode/opencode.json: config/opencode/opencode.json
-    ~/.claude/skills: config/claude/skills
+    ~/.claude/skills:
+      path: config/agents/skills/*
+      glob: true
+      create: true
     ~/.claude/themes: config/claude/themes
     ~/.claude/settings.json: config/claude/settings.json
+    ~/.gemini/config/skills: config/agents/skills
